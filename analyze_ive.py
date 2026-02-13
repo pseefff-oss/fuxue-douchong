@@ -140,8 +140,8 @@ def load_data() -> dict:
             "comments": v.get("comments"),
             "shares": v.get("shares"),
             "platform": "youtube",
-            "date": None,
-            "month": None,
+            "date": v.get("upload_date"),
+            "month": v["upload_date"][:7] if v.get("upload_date") else None,
         })
 
     # Douyin — merge all sources
@@ -885,6 +885,8 @@ def generate_html(analysis: dict, data: dict, path: Path):
     dy_total_likes = sum(v.get("likes", 0) for v in data["douyin"])
     tt_dates = [v["date"] for v in data["tiktok"] if v.get("date")]
     tt_date_range = f"{min(tt_dates)} to {max(tt_dates)}" if tt_dates else "N/A"
+    yt_dates = [v["date"] for v in data["youtube"] if v.get("date")]
+    yt_date_range = f"{min(yt_dates)} to {max(yt_dates)}" if yt_dates else "N/A"
     dy_dates = [v["date"] for v in data["douyin"] if v.get("date")]
     dy_date_range = f"{min(dy_dates)} to {max(dy_dates)}" if dy_dates else "N/A"
 
@@ -1139,7 +1141,7 @@ header .subtitle {{ color: #94a3b8; font-size: 1.1em; margin-top: 8px; }}
   <div class="stat-card"><div class="value">{fmt_num(yt_total_views)}</div><div class="label">YouTube Total Views</div></div>
   <div class="stat-card"><div class="value">{fmt_num(dy_total_likes)}</div><div class="label">Douyin Total Likes</div></div>
   <div class="stat-card"><div class="value">{tt_date_range}</div><div class="label">TikTok Date Range</div></div>
-  <div class="stat-card"><div class="value">N/A</div><div class="label">YouTube Date Range</div></div>
+  <div class="stat-card"><div class="value">{yt_date_range}</div><div class="label">YouTube Date Range</div></div>
   <div class="stat-card"><div class="value">{dy_date_range}</div><div class="label">Douyin Date Range</div></div>
 </div>
 
