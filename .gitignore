@@ -1,0 +1,19 @@
+# Large raw data files
+ive_all_stats.json
+ive_analysis.json
+engagement_progress.json
+douyin_full_stats.json
+douyin_ive_all_videos.json
+douyin_links_old.json
+douyin_remaining_ids.json
+douyin_retry_ids.json
+douyin_stats.json
+ive_full_analysis.json
+douyin_batch2_raw.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Temp
+*.tmp
