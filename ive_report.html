@@ -43,6 +43,15 @@ header .subtitle { color: #94a3b8; font-size: 1.1em; margin-top: 8px; }
 .table-scroll { overflow-x: auto; }
 .chart-wrap { background: #0f172a; border-radius: 8px; padding: 16px; }
 .chart-wrap canvas { max-height: 350px; }
+.analysis-content { max-width: 900px; margin: 0 auto; }
+.analysis-content h3 { color: #FF6B9D; font-size: 1.4em; margin: 32px 0 12px; padding-top: 16px; border-top: 1px solid #334155; }
+.analysis-content h4 { color: #C084FC; font-size: 1.1em; margin: 20px 0 8px; }
+.analysis-content p { color: #cbd5e1; margin: 10px 0; line-height: 1.8; }
+.analysis-content ul { color: #cbd5e1; margin: 10px 0 10px 24px; }
+.analysis-content li { margin: 6px 0; line-height: 1.7; }
+.analysis-content hr { border: none; border-top: 1px solid #334155; margin: 32px 0; }
+.analysis-content strong { color: #f1f5f9; }
+.analysis-content table { margin: 16px 0; }
 @media (max-width: 768px) { .tab-btn { padding: 6px 10px; font-size: 0.8em; } }
 </style>
 </head>
@@ -51,7 +60,7 @@ header .subtitle { color: #94a3b8; font-size: 1.1em; margin-top: 8px; }
 <header>
   <h1>IVE Cross-Platform Analysis</h1>
   <p class="subtitle">Member Popularity across TikTok, YouTube Shorts &amp; Douyin</p>
-  <p class="subtitle">Generated: 2026-02-13 12:16</p>
+  <p class="subtitle">Generated: 2026-02-13 14:30</p>
 </header>
 
 <div class="stats-grid">
@@ -63,6 +72,8 @@ header .subtitle { color: #94a3b8; font-size: 1.1em; margin-top: 8px; }
   <div class="stat-card"><div class="value">1.4B</div><div class="label">YouTube Total Views</div></div>
   <div class="stat-card"><div class="value">67.3M</div><div class="label">Douyin Total Likes</div></div>
   <div class="stat-card"><div class="value">2021-11-01 to 2026-02-12</div><div class="label">TikTok Date Range</div></div>
+  <div class="stat-card"><div class="value">N/A</div><div class="label">YouTube Date Range</div></div>
+  <div class="stat-card"><div class="value">2023-04-05 to 2026-02-12</div><div class="label">Douyin Date Range</div></div>
 </div>
 
 <nav class="section-nav">
@@ -72,6 +83,7 @@ header .subtitle { color: #94a3b8; font-size: 1.1em; margin-top: 8px; }
 <a class="section-nav-btn" href="#solo-tiktok">Solo TikTok</a>
 <a class="section-nav-btn" href="#solo-youtube">Solo YouTube</a>
 <a class="section-nav-btn" href="#solo-douyin">Solo Douyin</a>
+<a class="section-nav-btn" href="#analysis">Analysis</a>
 </nav>
 
 
@@ -422,6 +434,308 @@ header .subtitle { color: #94a3b8; font-size: 1.1em; margin-top: 8px; }
 </div>
 </div>
 
+
+<div class="section" id="analysis">
+<h2>Analysis</h2>
+<div class="analysis-content">
+<div class="tab-nav">
+<button class="tab-btn active" data-target="analysis-normal">Analysis</button>
+<button class="tab-btn" data-target="analysis-toxic">Toxic Version</button>
+</div>
+<div class="tab-panel active" id="analysis-normal">
+<p><strong>Dataset</strong>: 3,604 videos from IVE's official accounts</p>
+<p><strong>Platforms</strong>: TikTok (1,349) | YouTube Shorts (1,447) | Douyin (808)</p>
+<p><strong>Solo videos analyzed</strong>: 1,623 (videos tagged to a single member)</p>
+<p><strong>Data collected</strong>: February 2026</p>
+<hr>
+<h3>Quick Answer: Who Is the Back?</h3>
+<p><strong>LEESEO.</strong></p>
+<p>Across 19 solo performance metrics (average, median, max, top-5 for views/likes/comments/shares on TikTok, YouTube, and Douyin), LEESEO finishes last 12 times. She finishes 5th or 6th on 12 out of 19 metrics. Her average rank across all metrics is 4.74 — the worst in the group. She has zero #1 finishes.</p>
+<p>On TikTok, her solo average views (2.1M) are 51% of the other five members' average. Her TikTok max (14.1M) is 43% of the best. Only 3.7% of her TikTok videos cross 5M views — the next lowest is LIZ at 9.9%, nearly 3x higher. She has zero videos above 20M on TikTok and zero above 5M on YouTube.</p>
+<p>Her top-end ceiling is so low that her TikTok P90 (the view count her top 10% of videos reach) is 4.1M — below WONYOUNG's *median* (5.0M). Her best TikTok videos perform worse than WONYOUNG's typical video.</p>
+<p>She contributes the smallest share of total solo views on both platforms: 7.2% of TikTok solo views and 9.9% of YouTube solo views.</p>
+<p>The one nuance: she's 3rd on Douyin and has the tightest distribution (most consistent). But consistency at a low level is still a low level.</p>
+<p>It's LEESEO. The data is unambiguous.</p>
+<hr>
+<h3>The Full Ranking Table</h3>
+<p>Across 19 solo metrics on all three platforms:</p>
+<table class="data-table">
+<tr><th>Metric</th><th>WONYOUNG</th><th>YUJIN</th><th>REI</th><th>GAEUL</th><th>LIZ</th><th>LEESEO</th></tr>
+<tr><td>TT avg views</td><td>1</td><td>3</td><td>2</td><td>4</td><td>5</td><td>**6**</td></tr>
+<tr><td>TT med views</td><td>1</td><td>2</td><td>3</td><td>5</td><td>4</td><td>**6**</td></tr>
+<tr><td>TT max views</td><td>2</td><td>5</td><td>1</td><td>3</td><td>4</td><td>**6**</td></tr>
+<tr><td>TT top5 views</td><td>2</td><td>4</td><td>1</td><td>3</td><td>5</td><td>**6**</td></tr>
+<tr><td>TT avg likes</td><td>1</td><td>3</td><td>2</td><td>5</td><td>4</td><td>**6**</td></tr>
+<tr><td>TT med likes</td><td>1</td><td>3</td><td>2</td><td>5</td><td>4</td><td>**6**</td></tr>
+<tr><td>TT avg comments</td><td>1</td><td>5</td><td>2</td><td>4</td><td>3</td><td>**6**</td></tr>
+<tr><td>TT avg shares</td><td>1</td><td>5</td><td>2</td><td>**6**</td><td>4</td><td>3</td></tr>
+<tr><td>YT avg views</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>**6**</td></tr>
+<tr><td>YT med views</td><td>1</td><td>**6**</td><td>4</td><td>3</td><td>5</td><td>2</td></tr>
+<tr><td>YT max views</td><td>1</td><td>3</td><td>2</td><td>4</td><td>5</td><td>**6**</td></tr>
+<tr><td>YT top5 views</td><td>1</td><td>3</td><td>2</td><td>4</td><td>5</td><td>**6**</td></tr>
+<tr><td>YT avg likes</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>**6**</td></tr>
+<tr><td>YT med likes</td><td>1</td><td>4</td><td>3</td><td>5</td><td>**6**</td><td>2</td></tr>
+<tr><td>YT avg comments</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>**6**</td></tr>
+<tr><td>DY avg likes</td><td>1</td><td>5</td><td>**6**</td><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>DY med likes</td><td>1</td><td>**6**</td><td>5</td><td>4</td><td>2</td><td>3</td></tr>
+<tr><td>DY max likes</td><td>1</td><td>4</td><td>5</td><td>**6**</td><td>3</td><td>2</td></tr>
+<tr><td>DY top5 likes</td><td>1</td><td>4</td><td>**6**</td><td>5</td><td>2</td><td>3</td></tr>
+</table>
+<p><strong>Summary:</strong></p>
+<table class="data-table">
+<tr><th></th><th>WONYOUNG</th><th>YUJIN</th><th>REI</th><th>GAEUL</th><th>LIZ</th><th>LEESEO</th></tr>
+<tr><td>Avg rank</td><td>**1.11**</td><td>3.74</td><td>3.00</td><td>4.32</td><td>4.11</td><td>4.74</td></tr>
+<tr><td>#1 finishes</td><td>17</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>Last place</td><td>0</td><td>2</td><td>2</td><td>2</td><td>1</td><td>**12**</td></tr>
+<tr><td>Bottom two</td><td>0</td><td>6</td><td>4</td><td>7</td><td>9</td><td>**12**</td></tr>
+</table>
+<hr>
+<h3>WONYOUNG: In a League of Her Own</h3>
+<p><strong>Rank: #1 on 17 of 19 metrics.</strong></p>
+<p>WONYOUNG finishes 1st on every metric except TikTok max views (2nd, behind REI) and TikTok top-5 average (2nd, behind REI). That's it. Two silver medals. Everything else is gold.</p>
+<p>Her TikTok solo average (7.6M views) is 1.8x the second-place member. On Douyin, the gap widens to 3.1x over #2 LIZ. She has the highest average, the highest median, and the highest top-5 average on every single platform.</p>
+<p>She does this on the lowest volume: 177 solo videos total, the fewest by far. REI has 505. YUJIN has 265. WONYOUNG posts less and gets more, every time.</p>
+<p>Her viral rates are absurd. On TikTok, 50% of her solo videos cross 5M, 32.4% cross 10M, and 10.3% cross 20M. The next closest at >10M is REI at 9.1%. On Douyin, 9.1% of her videos cross 1M likes — LEESEO has 1 video above that, everyone else has zero.</p>
+<p>She contributes 21.6% of all solo TikTok views despite posting only 10.6% of solo TikTok videos. On YouTube, it's 18.6% of views from 12.5% of videos.</p>
+<p>The tradeoff is variance (CV averages 131%) — but her floor is still high. Her TikTok P25 (2.7M) is higher than LEESEO's median and close to GAEUL's median.</p>
+<p>There is no debate about #1.</p>
+<hr>
+<h3>GAEUL: The Most Engaged Audience</h3>
+<p><strong>Avg rank: 4.32. But engagement tells a different story.</strong></p>
+<p>The view count ranking puts GAEUL 4th, but that misses what's most distinctive about her numbers: the people who watch her content engage more deeply than any other member's audience.</p>
+<p><strong>YouTube engagement:</strong></p>
+<ul>
+<li>Like rate: <strong>#1</strong> at 7.00% (vs REI 5.67%, YUJIN 6.03%)</li>
+<li>Comment rate: <strong>#1</strong> at 0.094% (vs YUJIN 0.062%, REI 0.069%)</li>
+<li>Total engagement rate: <strong>#1</strong> at 7.10%</li>
+</ul>
+<p>GAEUL's 695K average YouTube views produce about 48,700 likes per video. REI's 952K average views produce 54,000 likes. REI needs 37% more views to generate only 11% more likes. YUJIN's 1.06M average views produce 63,800 likes — 52% more views than GAEUL for only 31% more likes. The algorithm gives YUJIN and REI more reach, but GAEUL's audience converts at a higher rate.</p>
+<p><strong>TikTok ceiling:</strong></p>
+<p>Her top-5 TikTok average (17.4M) is 3rd overall, ahead of YUJIN (13.1M) by 1.34x. Her TikTok max (25.3M) is 3rd. At the >20M threshold, she has a 2.1% hit rate — YUJIN has 0.0% (zero solo videos above 20M). She has produced more >20M TikTok videos than YUJIN, LIZ, and LEESEO combined.</p>
+<p><strong>Douyin stability:</strong> One of only two members (with WONYOUNG) whose Douyin rank matches their global rank. 4th on TikTok, 4th on Douyin. Her median Douyin likes (37.9K) are 1.63x YUJIN's (23.2K).</p>
+<p>The weakness is real: her TikTok median (1.55M) and P25 (825K) are low — 5th among solos. Her TikTok CV (144.5%) is the highest. She is genuinely inconsistent. But inconsistency that produces a high ceiling and an engaged audience is not the same as inconsistency that produces nothing.</p>
+<p>GAEUL is not a 4th-place member. She's a member whose impact is underestimated by view counts.</p>
+<hr>
+<h3>REI: Volume Without Proportional Depth</h3>
+<p><strong>Avg rank: 3.00. Inflated by volume.</strong></p>
+<p>REI has produced 505 solo videos — more than WONYOUNG, LIZ, and LEESEO combined (604). She contributes the most total solo views on both TikTok (34.9%, 839M) and YouTube (29.3%, 165M). By total output, she's the engine that keeps IVE's channels alive.</p>
+<p>But total views is a volume stat, and per-video, the picture is weaker than it looks.</p>
+<p><strong>YouTube engagement — near the bottom:</strong></p>
+<ul>
+<li>Like rate: <strong>#6 (last)</strong> at 5.67%</li>
+<li>Comment rate: <strong>#5</strong> at 0.069%</li>
+<li>She gets 952K avg views but only 5.67% like — GAEUL gets 695K views but 7.00% like. In absolute likes per video, REI (54K) barely leads GAEUL (48.7K) despite a 37% view advantage.</li>
+</ul>
+<p><strong>YouTube median tells the story:</strong> Despite posting the most solo YouTube videos (173), her median (421K) is 4th — below LEESEO (437K), GAEUL (426K), and WONYOUNG (600K). More content, same typical performance. The volume pushes her average and total up, but her typical video doesn't outperform members who post half as much.</p>
+<p><strong>TikTok is better but context matters:</strong> Her TikTok solo average (4.2M) is genuinely 2nd, and her TikTok like rate (13.3%) is #1. But she has 198 solo TikTok videos — TikTok's algorithm rewards volume with distribution. Is she 2nd because her content is better, or because the algorithm has 198 chances to find a hit? Her TikTok CV (120.7%) is worse than WONYOUNG, YUJIN, LIZ, and LEESEO.</p>
+<p><strong>Douyin exposes the gap:</strong> On Douyin, where volume doesn't drive algorithmic boost the same way, REI is dead last. 134 solo videos, 54.4K avg likes — last place. Her Douyin top-5 (267K) is the lowest of any member. The Chinese audience, making independent decisions from the global algorithm, doesn't choose REI's content.</p>
+<p>REI's 505 videos have real value — channels need content. But her #2/#3 ranking on global platforms overstates her per-video impact. When you control for how much she posts, she's closer to middle of the pack.</p>
+<hr>
+<h3>YUJIN: Reach Without Resonance</h3>
+<p><strong>Avg rank: 3.74. Views overstate engagement.</strong></p>
+<p>YUJIN ranks 2nd on YouTube (1.06M avg views) and 3rd on TikTok (3.4M avg). Her TikTok CV (89.4%) is the best in the group — she's the most consistent member on that platform. These are real strengths.</p>
+<p>But every engagement depth metric tells a different story.</p>
+<p><strong>Last in engagement depth on both platforms:</strong></p>
+<ul>
+<li>TikTok comment rate: <strong>#6 (last)</strong> at 0.087% — 29% below WONYOUNG, 23% below GAEUL, 30% below LIZ</li>
+<li>YouTube comment rate: <strong>#6 (last)</strong> at 0.062% — 34% below GAEUL, 24% below WONYOUNG</li>
+<li>TikTok like rate: <strong>#5</strong> at 11.84%</li>
+<li>YouTube like rate: <strong>#4</strong> at 6.03%</li>
+</ul>
+<p>She never finishes above 4th on any engagement rate. Views measure reach — the algorithm serves her content. Engagement rate measures resonance — what the viewer does after seeing it. YUJIN has reach without proportional resonance. More people see her videos, but a smaller fraction feel moved to comment or like.</p>
+<p><strong>Ceiling is capped:</strong> Her TikTok max (15.3M) is 5th — below GAEUL (25.3M), despite YUJIN having a higher average. She has zero solo TikTok videos above 20M. GAEUL has 2, REI has 8, WONYOUNG has 7. YUJIN's consistency means she never drops low, but it also means she never spikes high. Her top-5 TikTok average (13.1M) is 4th.</p>
+<p><strong>Douyin weakness:</strong> She drops to 5th with 67.2K avg likes and a 184% CV (second-worst). Her Douyin median (23.2K) is second-lowest, above only REI. The Chinese market does not gravitate to YUJIN.</p>
+<p><strong>YouTube median reveals something:</strong> Her YouTube median (391K) is actually last — 6th of 6 solo members. Yes, her YouTube *average* is 2nd (1.06M), but her *median* is the lowest. That means her YouTube average is pulled up by a few big hits while her typical video underperforms even LEESEO's. The gap between her YouTube average rank (#2) and YouTube median rank (#6) is the largest disconnect of any member on any platform.</p>
+<p>YUJIN is not bad — a 3.4M TikTok average and strong consistency are real. But her engagement data suggests the standard narrative of "YUJIN is #2/#3" is built on algorithmic reach rather than audience connection.</p>
+<hr>
+<h3>LIZ: Different Market, Different Story</h3>
+<p><strong>Avg rank: 4.11. But #2 where it counts for China.</strong></p>
+<p>LIZ is 5th on TikTok, 5th on YouTube. On global platforms she sits in the lower tier: 2.7M TikTok avg, 680K YouTube avg.</p>
+<p>But her engagement is better than her views suggest:</p>
+<ul>
+<li>TikTok comment rate: <strong>#1</strong> at 0.128% — ahead of even WONYOUNG (0.123%)</li>
+<li>TikTok like rate: <strong>#2</strong> at 12.81%</li>
+<li>YouTube like rate: <strong>#2</strong> at 6.49%</li>
+<li>YouTube comment rate: <strong>#3</strong> at 0.082%</li>
+</ul>
+<p>She doesn't get served as many views, but the viewers she reaches engage deeply. Her TikTok comment rate being #1 is notable — comments are the highest-effort engagement action. More people talk about LIZ's content than any other member's, proportionally.</p>
+<p><strong>Douyin is where she transforms.</strong> Average solo likes: 161K — 2nd only to WONYOUNG. Viral rate at >200K likes: 18.9%, nearly matching WONYOUNG's 20.5%. Top-5 Douyin average: 608K — 2nd. She jumps 3 ranks from her global position.</p>
+<p>For a group with Chinese market ambitions, LIZ is the clear #2 asset behind WONYOUNG on Douyin. This isn't noise — it's a consistent pattern across average, median, max, and viral rates.</p>
+<hr>
+<h3>LEESEO: The Back</h3>
+<p><strong>Avg rank: 4.74. Last on 12 of 19 metrics. Bottom two on 12 of 19 metrics.</strong></p>
+<p>LEESEO is the least popular member by every aggregate measure.</p>
+<p><strong>TikTok:</strong> Her solo average (2.1M) is 51% of the other five members' combined average. Her max (14.1M) is 59% of the average max. Only 3.7% of her solo TikTok videos cross 5M views. For comparison: WONYOUNG 50.0%, REI 25.8%, YUJIN 20.9%, GAEUL 13.5%, LIZ 9.9%. LEESEO is at 3.7%. She has zero videos above 20M, same as LIZ and YUJIN — but LIZ and YUJIN have higher averages to compensate.</p>
+<p>Her TikTok P90 (4.1M) — the level her top 10% of videos reach — is below WONYOUNG's median (5.0M). Her best videos don't reach what WONYOUNG does on a normal day.</p>
+<p><strong>YouTube:</strong> Solo average 670K (last), max 3.8M (last — 32% of best), top-5 average 2.94M (last). Zero videos above 5M. Her YouTube P90 (1.2M) is the lowest. She contributes 9.9% of solo YouTube views — the smallest share.</p>
+<p><strong>Viral ceiling is absent.</strong> On TikTok: 1.2% >10M hit rate (next lowest: GAEUL/YUJIN at 5.2%). On YouTube: 0% >5M hit rate. She doesn't produce breakout content on either global platform.</p>
+<p><strong>The consistency argument:</strong> LEESEO's defenders would point to her consistency — CV 58.4% on YouTube likes (best in group), median/mean ratio 69.8% (best in group). And yes, she's predictable. But she's predictably below everyone else. A tight distribution centered on 670K YouTube views is not better than a wider distribution centered on 1.06M (YUJIN) or 695K with 7% engagement (GAEUL). Consistency has value when the center is high. LEESEO's center is the lowest.</p>
+<p><strong>Douyin is the bright spot.</strong> She jumps to 3rd (99.9K avg likes, 51.8K median). Her Douyin median is above YUJIN, REI, and GAEUL. Like LIZ, the Chinese audience responds to her more than global audiences do. But 3rd on Douyin doesn't offset last on TikTok and last on YouTube — not when TikTok and YouTube reach 10-100x more people.</p>
+<p><strong>Volume isn't the excuse.</strong> She has 217 solo videos — more than WONYOUNG (177). She has the same TikTok count as LIZ (81 each). LIZ averages 2.7M on TikTok; LEESEO averages 2.1M. She gets equal opportunity and lower results.</p>
+<p>LEESEO is the back. She's last in 12 of 19 raw metrics, last in average rank, has the lowest ceiling on global platforms, and her one strength (consistency) is consistency at the lowest level. The Douyin performance hints at potential with Chinese audiences, but on the platforms that matter most for reach, the data is clear.</p>
+<hr>
+<h3>Platform Dynamics</h3>
+<h4>TikTok vs YouTube</h4>
+<p>TikTok views run 4-6x higher than YouTube for the same member. The ranking order is nearly identical, but YouTube is more top-heavy: viral multipliers are higher (YUJIN's P90/median is 7.4x on YouTube vs 3.0x on TikTok), meaning YouTube hits spike proportionally bigger.</p>
+<p>Engagement rates are ~2x higher on TikTok (11.8-13.3%) vs YouTube (5.7-7.0%), consistent with platform norms.</p>
+<p>The biggest YouTube anomaly: YUJIN's median (391K, last) vs average (1.06M, 2nd). She has the largest average-median gap on YouTube, meaning a few viral hits inflate an otherwise below-average baseline.</p>
+<h4>Douyin vs Everything Else</h4>
+<p>The hierarchy inverts:</p>
+<table class="data-table">
+<tr><th>TikTok Rank</th><th>Member</th><th>Douyin Rank</th><th>Shift</th></tr>
+<tr><td>1</td><td>WONYOUNG</td><td>1</td><td>--</td></tr>
+<tr><td>2</td><td>REI</td><td>**6**</td><td>-4</td></tr>
+<tr><td>3</td><td>YUJIN</td><td>5</td><td>-2</td></tr>
+<tr><td>4</td><td>GAEUL</td><td>4</td><td>--</td></tr>
+<tr><td>5</td><td>LIZ</td><td>**2**</td><td>+3</td></tr>
+<tr><td>6</td><td>LEESEO</td><td>**3**</td><td>+3</td></tr>
+</table>
+<p>REI drops 4 ranks. YUJIN drops 2. LIZ and LEESEO each gain 3. Only WONYOUNG and GAEUL hold.</p>
+<p>This is the strongest evidence that member popularity is audience-dependent, not fixed. The Chinese market has meaningfully different preferences. REI and YUJIN — the members most boosted by global algorithmic reach — fall hardest when the audience makes independent choices.</p>
+<hr>
+<h3>The Engagement vs Views Disconnect</h3>
+<p>YouTube engagement rate ranking vs views ranking:</p>
+<table class="data-table">
+<tr><th>Rank</th><th>By Avg Views</th><th>By Like Rate</th><th>By Comment Rate</th></tr>
+<tr><td>1</td><td>WONYOUNG</td><td>**GAEUL**</td><td>**GAEUL**</td></tr>
+<tr><td>2</td><td>YUJIN</td><td>LIZ</td><td>WONYOUNG</td></tr>
+<tr><td>3</td><td>REI</td><td>WONYOUNG</td><td>LIZ</td></tr>
+<tr><td>4</td><td>GAEUL</td><td>YUJIN</td><td>LEESEO</td></tr>
+<tr><td>5</td><td>LIZ</td><td>LEESEO</td><td>REI</td></tr>
+<tr><td>6</td><td>LEESEO</td><td>REI</td><td>**YUJIN**</td></tr>
+</table>
+<p>GAEUL goes from 4th in views to 1st in engagement. REI goes from 3rd to last. YUJIN goes from 2nd to last in comments. The members the algorithm pushes hardest are not the ones audiences connect with most.</p>
+<hr>
+<h3>Key Takeaways</h3>
+<ul>
+<li><strong>WONYOUNG is the franchise player.</strong> #1 on 17/19 metrics. 1.8-3.1x ahead of #2 depending on platform. Does it on the lowest volume.</li>
+<li><strong>GAEUL is undervalued by views.</strong> #1 YouTube engagement rate, #1 YouTube comment rate, elite TikTok viral ceiling (more >20M videos than YUJIN+LIZ+LEESEO combined). Her audience is smaller but more invested than any other member's.</li>
+<li><strong>REI runs on volume, not efficiency.</strong> 505 videos inflate her totals, but per-video engagement is last on YouTube and last on Douyin. Her YouTube median (421K) is 4th despite posting the most. Strip the volume and she's mid-pack.</li>
+<li><strong>YUJIN has a resonance gap.</strong> Last in comment rate on both platforms. YouTube median (391K) is dead last despite YouTube average being 2nd — the biggest average/median disconnect in the dataset. The algorithm distributes her content; the audience doesn't engage back proportionally.</li>
+<li><strong>LIZ is the Douyin asset.</strong> 5th globally, 2nd in China. #1 TikTok comment rate. Her audiences are small but deeply engaged.</li>
+<li><strong>LEESEO is the back.</strong> Last on 12/19 metrics. 51% of others' TikTok average. Zero >20M TikTok videos, zero >5M YouTube videos. Consistent, but at the lowest level. 3rd on Douyin is the only bright spot.</li>
+<li><strong>Views and engagement tell different stories.</strong> The standard hierarchy (WONYOUNG > REI/YUJIN > GAEUL > LIZ > LEESEO) is a views ranking. The engagement ranking is closer to WONYOUNG > GAEUL > LIZ > the rest. Both matter, but one measures algorithmic push and the other measures audience pull.</li>
+</ul>
+</div>
+<div class="tab-panel" id="analysis-toxic">
+<p><strong>3,604 videos. Three platforms. No excuses.</strong></p>
+<hr>
+<h3>The Verdict (Skip Here If You Can't Handle It)</h3>
+<table class="data-table">
+<tr><th>Tier</th><th>Member</th><th>Summary</th></tr>
+<tr><td>S</td><td>WONYOUNG</td><td>She IS IVE. Everyone else is a supporting character.</td></tr>
+<tr><td>A</td><td>GAEUL</td><td>The only member whose audience actually cares.</td></tr>
+<tr><td>B</td><td>REI</td><td>Content farm. Quantity cosplaying as quality.</td></tr>
+<tr><td>B-</td><td>LIZ</td><td>Invisible globally. Carried by Chinese aunties.</td></tr>
+<tr><td>C</td><td>YUJIN</td><td>The leader nobody engages with. Algorithmic charity case.</td></tr>
+<tr><td>D</td><td>LEESEO</td><td>Why is she getting solo content?</td></tr>
+</table>
+<hr>
+<h3>WONYOUNG: She's Not Your Bias, She's Everyone's</h3>
+<p>Let's stop pretending this is a group of equals. WONYOUNG averages 7.6M views per solo TikTok. The group average without her is 3.0M. She is literally worth 2.5 of any other member.</p>
+<p>She posts the LEAST content (177 solo videos — REI has 505) and gets the MOST views. She doesn't need volume. She doesn't need the algorithm's help. She shows up, the internet stops scrolling, and 7.6 million people watch.</p>
+<p>32.4% of her TikTok videos break 10M. REI, who posts 3x more, hits that rate at 9.1%. WONYOUNG is 3.5x more likely to go viral per video while posting 3x less. Do the math on efficiency and it's embarrassing for everyone else.</p>
+<p>On Douyin she averages 507K likes. #2 is LIZ at 161K. That's a 3.1x gap. WONYOUNG's FLOOR on Douyin (P25 = 37K) is higher than YUJIN's median (23K). Her bad days beat YUJIN's normal days on the Chinese internet.</p>
+<p>The TikTok P25 stat is the cruelest number in this dataset: WONYOUNG's bottom 25% of videos (2.7M+ views) would be a career highlight for LEESEO.</p>
+<p>There is WONYOUNG, and then there is everyone else. The gap isn't closing.</p>
+<hr>
+<h3>GAEUL: The One They Sleep On</h3>
+<p>Here's a fun stat the view count stans don't want to talk about: GAEUL has the highest YouTube engagement rate in the group. 7.00%. Higher than WONYOUNG (6.29%). Higher than YUJIN (6.03%). Way higher than REI (5.67%).</p>
+<p>Comment rate? Also #1. 0.094%. People don't just watch GAEUL — they feel something and type about it.</p>
+<p>REI gets 952K average YouTube views and produces 54K likes. GAEUL gets 695K and produces 48.7K likes. REI needs 37% more eyeballs to barely beat GAEUL in likes. That's not REI being better. That's the algorithm doing charity work for REI while GAEUL earns every like.</p>
+<p>On TikTok: GAEUL has more solo videos above 20M views (2) than YUJIN (0). Read that again. The "leader" of IVE — the one who's supposed to be the face alongside WONYOUNG — has ZERO solo TikTok videos above 20M. GAEUL has more. With fewer total videos. And a lower average.</p>
+<p>Her TikTok top-5 average (17.4M) destroys YUJIN's (13.1M). When GAEUL goes viral, she goes BIGGER. Her max (25.3M) is 10M higher than YUJIN's (15.3M). YUJIN's biggest solo TikTok hit wouldn't even crack GAEUL's top 3.</p>
+<p>Yes, GAEUL's floor is low. Her median (1.55M) is 5th. But I'd rather be the member who can touch 25M than the member who reliably gets 2.5M and never breaks higher. One of those profiles gets brand deals. The other gets "at least she's consistent."</p>
+<p>The fandom undersells GAEUL because they confuse algorithmic reach with actual popularity. The engagement data says the audience that finds GAEUL's content loves it more than any other member's audience loves theirs.</p>
+<hr>
+<h3>REI: The Illusion of Relevance</h3>
+<p>505 solo videos. Five hundred and five. That's more than WONYOUNG, LIZ, and LEESEO combined.</p>
+<p>And what does all that content buy her? A YouTube median of 421K — 4th place. Below LEESEO. Let that sink in. REI posts 2x more YouTube content than anyone else and her TYPICAL video gets fewer views than LEESEO's typical video.</p>
+<p>Her YouTube engagement rate is 5.67%. Dead last. Tied with LEESEO — the member we're about to identify as the back. REI's engagement rate is the same as the worst member in the group. But sure, she's "#2."</p>
+<p>The total views stat is a scam. REI has 839M total solo TikTok views — #1 excluding WONYOUNG! Impressive until you realize she posted 198 videos to get there. WONYOUNG posted 68 and got 520M. Per video: WONYOUNG gets 7.6M, REI gets 4.2M. REI needs to grind out 3x the content to accumulate 1.6x the total. That's not dominance, that's a content treadmill.</p>
+<p>Douyin rips the mask off completely. 134 solo videos — the most of any member — and she's LAST. 54.4K average likes. LEESEO (53 videos) averages 99.9K. LIZ (41 videos) averages 161K. Members posting a third of REI's volume are getting 2-3x her engagement on Douyin. When the algorithm can't carry her, the audience doesn't pick her.</p>
+<p>REI is the member Starship puts out there because someone has to fill the content calendar. She's the reliable workhorse who shows up every day, posts another video, and gets perfectly average results that look impressive only because she does it 505 times. She's not popular. She's prolific. Those are different things.</p>
+<hr>
+<h3>YUJIN: The Leader Tax</h3>
+<p>YUJIN is the leader of IVE. She's positioned as one of the two centers alongside WONYOUNG. She ranks 2nd on YouTube, 3rd on TikTok. Sounds good on paper.</p>
+<p>Now look at what happens when you measure whether anyone actually cares:</p>
+<ul>
+<li>TikTok comment rate: <strong>LAST.</strong> 0.087%.</li>
+<li>YouTube comment rate: <strong>LAST.</strong> 0.062%.</li>
+<li>TikTok like rate: <strong>5th.</strong> 11.84%.</li>
+<li>YouTube like rate: <strong>4th.</strong> 6.03%.</li>
+</ul>
+<p>YUJIN finishes last in comment rate on BOTH platforms. Comments are the highest-effort engagement action — someone has to stop, think, and type. YUJIN's content makes people scroll past after watching. They saw it. They didn't care enough to say anything.</p>
+<p>Her YouTube comment rate (0.062%) is 34% lower than GAEUL's (0.094%). A member ranked 4th in views generates 52% more comments per view than the member ranked 2nd. That's not a small gap. That's a structural engagement deficit.</p>
+<p>And here's the stat that should end every "YUJIN is top 3" argument: her YouTube median is 391K. That's LAST. 6th of 6. Below LEESEO (437K). The member people call "the back" has a higher typical YouTube video than the group's leader.</p>
+<p>How is YUJIN's average 2nd (1.06M) but her median last (391K)? Because a handful of viral hits drag her average up while her typical video sits at the bottom. Remove her top 10% of YouTube videos and she's fighting LEESEO for last place. That 1.06M average is a statistical mirage built on outliers.</p>
+<p>On TikTok, she has zero solo videos above 20M. Zero. GAEUL has 2. REI has 8. WONYOUNG has 7. Even LIZ has videos approaching that range. YUJIN? Nothing. Her max is 15.3M — 5th out of 6. The leader has a lower TikTok ceiling than the 4th-ranked member.</p>
+<p>Douyin: 5th place, 67.2K average, 23.2K median. Below LEESEO's median (51.8K). The Chinese internet looked at YUJIN and said "pass."</p>
+<p>YUJIN benefits from positioning and algorithm distribution. She's placed prominently, so the algorithm serves her content widely. But when you measure what happens after people see it — likes, comments, shares — she's consistently at or near the bottom. She has reach without resonance. The algorithm likes YUJIN more than the audience does.</p>
+<p>Being the leader means you're supposed to lead. YUJIN leads in exactly one metric: most efficient at converting views into indifference.</p>
+<hr>
+<h3>LIZ: Korea's Reject, China's Darling</h3>
+<p>LIZ on TikTok: 2.7M average. 5th.</p>
+<p>LIZ on YouTube: 680K average. 5th.</p>
+<p>LIZ on Douyin: 161K average likes. <strong>2nd.</strong></p>
+<p>The global internet said "eh." The Chinese internet said "her." That's the entire LIZ story.</p>
+<p>On Douyin, her viral rate at >200K likes (18.9%) is within 2 points of WONYOUNG (20.5%). She's the only member who can even see WONYOUNG from where she's standing on the Chinese platform. Her top-5 Douyin average (608K) is closer to WONYOUNG territory than any other member gets on any platform.</p>
+<p>Her TikTok comment rate is #1 — 0.128%, ahead of WONYOUNG. The people who see LIZ's content comment more than they do on anyone else's content, including the biggest member in the group. That's a small but fiercely loyal audience.</p>
+<p>But let's not romanticize it. On the platforms that reach 10-100x more people than Douyin, she's 5th. Her TikTok max (15.9M) is 4th. She's not overlooked on global platforms — she's accurately rated. She just happens to have a completely different appeal in a different market.</p>
+<p>LIZ is the answer to the question "what if a member was perfectly mediocre everywhere except one specific country?" It's not nothing. Starship should absolutely lean into Chinese promotions with LIZ. But globally? She's filler.</p>
+<hr>
+<h3>LEESEO: Dead Weight</h3>
+<p>Let's count LEESEO's last-place finishes across 19 solo metrics:</p>
+<p>TikTok average views: <strong>last.</strong> TikTok median views: <strong>last.</strong> TikTok max views: <strong>last.</strong> TikTok top-5 average: <strong>last.</strong> TikTok average likes: <strong>last.</strong> TikTok median likes: <strong>last.</strong> TikTok average comments: <strong>last.</strong> YouTube average views: <strong>last.</strong> YouTube max views: <strong>last.</strong> YouTube top-5 average: <strong>last.</strong> YouTube average likes: <strong>last.</strong> YouTube average comments: <strong>last.</strong></p>
+<p>That's 12 out of 19 metrics. Last place. The back of the back.</p>
+<p>Her TikTok solo average is 2.1M. That's 51% of the other five members' average. She's literally half a member in terms of drawing power. Starship is spending resources giving her solo content that produces half the views it would produce for literally anyone else.</p>
+<p>Her TikTok max (14.1M) is less than WONYOUNG's P25 percentile. WONYOUNG's WORST 25% of videos outperform LEESEO's single best video. That's not a gap. That's a canyon.</p>
+<p>Viral rates are brutal:</p>
+<ul>
+<li>TikTok >5M: 3.7%. (Next lowest: LIZ at 9.9% — 2.7x higher)</li>
+<li>TikTok >10M: 1.2%. (Next lowest: GAEUL/YUJIN at 5.2% — 4.3x higher)</li>
+<li>TikTok >20M: 0.0%.</li>
+<li>YouTube >5M: 0.0%.</li>
+<li>YouTube >10M: 0.0%.</li>
+</ul>
+<p>She has never produced a YouTube video above 5 million views. Ever. In 83 solo videos. WONYOUNG has 4 above 5M in 78 videos. LEESEO is zero for 83.</p>
+<p>The "she's consistent" cope: yes, her CV is the lowest. Her median/mean ratio is the highest. She's remarkably stable. She's stably bad. A heart monitor showing a flat line is also very consistent. Consistency at the bottom of the group is not a flex.</p>
+<p>Her YouTube likes CV is 58.4% — the tightest distribution in the group. Because she consistently gets 30-40K likes per video. Every time. Never 100K. Never 5K. Just a steady, reliable 30-40K of people mildly enjoying her content and moving on. Meanwhile WONYOUNG's YouTube likes range from 20K to 540K because she actually has videos that break through.</p>
+<p>The Douyin argument: she's 3rd on Douyin with 99.9K average likes. That's real. But Douyin is IVE's smallest platform, and 3rd on Douyin with 53 videos doesn't offset being last on TikTok with 81 videos and last on YouTube with 83 videos.</p>
+<p>LEESEO contributes 7.2% of solo TikTok views and 9.9% of solo YouTube views. She's getting roughly equal posting opportunities as LIZ (81 vs 81 on TikTok, 83 vs 88 on YouTube) and producing less with them. It's not a sample size problem. It's not an exposure problem. The audience has seen her content. They prefer everyone else.</p>
+<p>Every solo video given to LEESEO is a solo video not given to WONYOUNG, GAEUL, or REI — members who would generate 1.5-3.6x more views from that same slot. Every piece of solo LEESEO content is an opportunity cost.</p>
+<p>She's the back. The data doesn't lie, and 3,604 videos is enough data to stop making excuses.</p>
+<hr>
+<h3>The Uncomfortable Rankings</h3>
+<p><strong>By views (what stans quote):</strong></p>
+<p>WONYOUNG >>> REI > YUJIN > GAEUL > LIZ > LEESEO</p>
+<p><strong>By engagement (what actually matters):</strong></p>
+<p>WONYOUNG >>> GAEUL > LIZ > REI > LEESEO > YUJIN</p>
+<p><strong>By viral ceiling (who breaks the internet):</strong></p>
+<p>WONYOUNG >>> REI > GAEUL > YUJIN > LIZ > LEESEO</p>
+<p><strong>By Douyin (Chinese market):</strong></p>
+<p>WONYOUNG >>> LIZ > LEESEO > GAEUL > YUJIN > REI</p>
+<p><strong>By efficiency (views per video posted):</strong></p>
+<p>WONYOUNG >>> REI > YUJIN > GAEUL > LIZ > LEESEO</p>
+<p><strong>By audience loyalty (engagement rate):</strong></p>
+<p>GAEUL > LIZ > WONYOUNG > LEESEO > YUJIN > REI</p>
+<p>Notice how YUJIN and REI swap between "looking good" and "looking bad" depending on whether you measure volume or quality. And notice how GAEUL is top 3 on every list except raw views. The view count hierarchy is propaganda. The engagement data is the truth.</p>
+<hr>
+<h3>Final Scoreboard</h3>
+<table class="data-table">
+<tr><th>Member</th><th>What They Are</th><th>What Stans Think They Are</th></tr>
+<tr><td>WONYOUNG</td><td>The entire group's economic engine</td><td>"Just one of six equal members"</td></tr>
+<tr><td>GAEUL</td><td>The most engagement-efficient member with elite ceiling</td><td>"The Back"</td></tr>
+<tr><td>REI</td><td>A content farm with last-place YouTube engagement</td><td>"The hardest working #2"</td></tr>
+<tr><td>YUJIN</td><td>Last in comments on both platforms with an inflated average</td><td>"The reliable leader"</td></tr>
+<tr><td>LIZ</td><td>A Douyin specialist invisible everywhere else</td><td>"Underrated queen"</td></tr>
+<tr><td>LEESEO</td><td>Last on 12/19 metrics, never broke 5M on YouTube</td><td>"She's only 17, she'll grow"</td></tr>
+</table>
+<p>3,604 videos. The data is in. Cope accordingly.</p>
+</div>
+
+</div>
+</div>
 
 </div>
 

@@ -885,6 +885,8 @@ def generate_html(analysis: dict, data: dict, path: Path):
     dy_total_likes = sum(v.get("likes", 0) for v in data["douyin"])
     tt_dates = [v["date"] for v in data["tiktok"] if v.get("date")]
     tt_date_range = f"{min(tt_dates)} to {max(tt_dates)}" if tt_dates else "N/A"
+    dy_dates = [v["date"] for v in data["douyin"] if v.get("date")]
+    dy_date_range = f"{min(dy_dates)} to {max(dy_dates)}" if dy_dates else "N/A"
 
 
     # ── Helper: build tabs for TikTok/YouTube (likes first, then views/comments/shares) ──
@@ -962,6 +964,92 @@ def generate_html(analysis: dict, data: dict, path: Path):
                      analysis.get("solo_douyin_shares", {}), analysis["solo_douyin_viral"],
                      members_solo, DY_TIERS, "Solo Douyin"))
 
+    # ── Build analysis HTML from markdown ──
+    def _md_to_html(md_path):
+        """Simple markdown to HTML converter (stdlib only)."""
+        import re as _re
+        if not md_path.exists():
+            return "<p>Analysis file not found.</p>"
+        text = md_path.read_text(encoding="utf-8")
+        lines = text.split("\n")
+        out = []
+        in_table = False
+        in_list = False
+        for line in lines:
+            stripped = line.strip()
+            # Skip the title (first h1)
+            if stripped.startswith("# ") and not any("<h" in o for o in out):
+                continue
+            # Horizontal rule
+            if stripped == "---":
+                if in_table:
+                    out.append("</table>")
+                    in_table = False
+                if in_list:
+                    out.append("</ul>")
+                    in_list = False
+                out.append("<hr>")
+                continue
+            # Headers
+            if stripped.startswith("## "):
+                if in_list:
+                    out.append("</ul>")
+                    in_list = False
+                out.append(f'<h3>{stripped[3:]}</h3>')
+                continue
+            if stripped.startswith("### "):
+                out.append(f'<h4>{stripped[4:]}</h4>')
+                continue
+            # Table
+            if stripped.startswith("|"):
+                cols = [c.strip() for c in stripped.split("|")[1:-1]]
+                if all(set(c) <= set("- :") for c in cols):
+                    continue  # separator row
+                if not in_table:
+                    out.append('<table class="data-table">')
+                    tag = "th"
+                    in_table = True
+                else:
+                    tag = "td"
+                row = "<tr>" + "".join(f"<{tag}>{c}</{tag}>" for c in cols) + "</tr>"
+                out.append(row)
+                continue
+            else:
+                if in_table:
+                    out.append("</table>")
+                    in_table = False
+            # Bold
+            formatted = _re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', stripped)
+            # List items
+            if formatted.startswith("- ") or _re.match(r'^\d+\.\s', formatted):
+                if not in_list:
+                    out.append("<ul>")
+                    in_list = True
+                item = _re.sub(r'^-\s|^\d+\.\s', '', formatted)
+                out.append(f"<li>{item}</li>")
+                continue
+            else:
+                if in_list and stripped:
+                    out.append("</ul>")
+                    in_list = False
+            # Paragraph
+            if stripped:
+                out.append(f"<p>{formatted}</p>")
+        if in_table:
+            out.append("</table>")
+        if in_list:
+            out.append("</ul>")
+        return "\n".join(out)
+
+    analysis_md = BASE_DIR / "IVE_ANALYSIS.md"
+    toxic_md = BASE_DIR / "IVE_ANALYSIS_TOXIC.md"
+    analysis_html = '<div class="tab-nav">\n'
+    analysis_html += '<button class="tab-btn active" data-target="analysis-normal">Analysis</button>\n'
+    analysis_html += '<button class="tab-btn" data-target="analysis-toxic">Toxic Version</button>\n'
+    analysis_html += '</div>\n'
+    analysis_html += f'<div class="tab-panel active" id="analysis-normal">\n{_md_to_html(analysis_md)}\n</div>\n'
+    analysis_html += f'<div class="tab-panel" id="analysis-toxic">\n{_md_to_html(toxic_md)}\n</div>\n'
+
     # Section nav labels
     nav_items = [
         ("all-tiktok", "All TikTok"),
@@ -970,6 +1058,7 @@ def generate_html(analysis: dict, data: dict, path: Path):
         ("solo-tiktok", "Solo TikTok"),
         ("solo-youtube", "Solo YouTube"),
         ("solo-douyin", "Solo Douyin"),
+        ("analysis", "Analysis"),
     ]
     nav_html = '<nav class="section-nav">\n'
     for sid, label in nav_items:
@@ -1021,6 +1110,15 @@ header .subtitle {{ color: #94a3b8; font-size: 1.1em; margin-top: 8px; }}
 .table-scroll {{ overflow-x: auto; }}
 .chart-wrap {{ background: #0f172a; border-radius: 8px; padding: 16px; }}
 .chart-wrap canvas {{ max-height: 350px; }}
+.analysis-content {{ max-width: 900px; margin: 0 auto; }}
+.analysis-content h3 {{ color: #FF6B9D; font-size: 1.4em; margin: 32px 0 12px; padding-top: 16px; border-top: 1px solid #334155; }}
+.analysis-content h4 {{ color: #C084FC; font-size: 1.1em; margin: 20px 0 8px; }}
+.analysis-content p {{ color: #cbd5e1; margin: 10px 0; line-height: 1.8; }}
+.analysis-content ul {{ color: #cbd5e1; margin: 10px 0 10px 24px; }}
+.analysis-content li {{ margin: 6px 0; line-height: 1.7; }}
+.analysis-content hr {{ border: none; border-top: 1px solid #334155; margin: 32px 0; }}
+.analysis-content strong {{ color: #f1f5f9; }}
+.analysis-content table {{ margin: 16px 0; }}
 @media (max-width: 768px) {{ .tab-btn {{ padding: 6px 10px; font-size: 0.8em; }} }}
 </style>
 </head>
@@ -1041,11 +1139,20 @@ header .subtitle {{ color: #94a3b8; font-size: 1.1em; margin-top: 8px; }}
   <div class="stat-card"><div class="value">{fmt_num(yt_total_views)}</div><div class="label">YouTube Total Views</div></div>
   <div class="stat-card"><div class="value">{fmt_num(dy_total_likes)}</div><div class="label">Douyin Total Likes</div></div>
   <div class="stat-card"><div class="value">{tt_date_range}</div><div class="label">TikTok Date Range</div></div>
+  <div class="stat-card"><div class="value">N/A</div><div class="label">YouTube Date Range</div></div>
+  <div class="stat-card"><div class="value">{dy_date_range}</div><div class="label">Douyin Date Range</div></div>
 </div>
 
 {nav_html}
 
 {sections_html}
+
+<div class="section" id="analysis">
+<h2>Analysis</h2>
+<div class="analysis-content">
+{analysis_html}
+</div>
+</div>
 
 </div>
 
