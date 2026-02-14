@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IVE 迷因百科 — 芙學·宮鬥·梗圖大全</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans TC', 'Noto Sans SC', sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.8; }
+.container { max-width: 960px; margin: 0 auto; padding: 20px; }
+
+/* ── header ── */
+header { text-align: center; padding: 48px 0 24px; }
+header h1 { font-size: 2.6em; background: linear-gradient(135deg, #FF6B9D, #C084FC, #60A5FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+header .subtitle { color: #94a3b8; font-size: 1.05em; margin-top: 6px; }
+
+/* ── toc ── */
+.toc { background: #1e293b; border-radius: 12px; padding: 24px 28px; margin: 32px 0; border: 1px solid #334155; }
+.toc h2 { font-size: 1.2em; margin-bottom: 12px; color: #60a5fa; }
+.toc ol { padding-left: 20px; }
+.toc li { margin: 6px 0; }
+.toc a { color: #93c5fd; text-decoration: none; font-weight: 500; }
+.toc a:hover { text-decoration: underline; color: #bfdbfe; }
+
+/* ── sections ── */
+.section { background: #1e293b; border-radius: 12px; padding: 28px 32px; margin: 28px 0; border: 1px solid #334155; scroll-margin-top: 24px; }
+.section h2 { font-size: 1.6em; margin-bottom: 14px; color: #f1f5f9; border-bottom: 2px solid #334155; padding-bottom: 8px; }
+.section h2 .emoji { font-style: normal; margin-right: 6px; }
+.section h3 { color: #FF6B9D; font-size: 1.2em; margin: 24px 0 8px; }
+.section h4 { color: #C084FC; font-size: 1.05em; margin: 16px 0 6px; }
+.section p { color: #cbd5e1; margin: 10px 0; }
+.section ul, .section ol { color: #cbd5e1; margin: 10px 0 10px 24px; }
+.section li { margin: 5px 0; }
+.section strong { color: #f1f5f9; }
+.section a { color: #60a5fa; text-decoration: none; }
+.section a:hover { text-decoration: underline; }
+.section hr { border: none; border-top: 1px solid #334155; margin: 24px 0; }
+
+/* ── tags / badges ── */
+.tag { display: inline-block; padding: 2px 10px; border-radius: 6px; font-size: 0.82em; font-weight: 600; margin: 2px 3px; }
+.tag-pink { background: #FF6B9D22; color: #FF6B9D; border: 1px solid #FF6B9D44; }
+.tag-purple { background: #C084FC22; color: #C084FC; border: 1px solid #C084FC44; }
+.tag-blue { background: #60A5FA22; color: #60A5FA; border: 1px solid #60A5FA44; }
+.tag-green { background: #4ade8022; color: #4ade80; border: 1px solid #4ade8044; }
+.tag-yellow { background: #facc1522; color: #facc15; border: 1px solid #facc1544; }
+.tag-red { background: #f8717122; color: #f87171; border: 1px solid #f8717144; }
+
+.platform-badges { margin: 6px 0 12px; }
+
+/* ── quote block ── */
+blockquote { border-left: 3px solid #C084FC; padding: 12px 16px; margin: 14px 0; background: #0f172a; border-radius: 0 8px 8px 0; color: #e2e8f0; font-style: italic; }
+
+/* ── info box ── */
+.info-box { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+.info-box .label { font-weight: 700; color: #facc15; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+
+/* ── timeline ── */
+.timeline { position: relative; padding-left: 28px; margin: 16px 0; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 2px; background: #334155; }
+.timeline-item { position: relative; margin: 16px 0; }
+.timeline-item::before { content: ''; position: absolute; left: -24px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: #C084FC; border: 2px solid #1e293b; }
+.timeline-item .date { color: #94a3b8; font-size: 0.85em; font-weight: 600; }
+.timeline-item .event { color: #cbd5e1; margin-top: 2px; }
+
+/* ── table ── */
+.wiki-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9em; }
+.wiki-table th { background: #334155; color: #e2e8f0; padding: 10px 12px; text-align: left; }
+.wiki-table td { padding: 8px 12px; border-bottom: 1px solid #334155; color: #cbd5e1; }
+.wiki-table tr:hover { background: #1e293b88; }
+
+/* ── back to top ── */
+.back-top { display: block; text-align: center; padding: 12px; color: #60a5fa; text-decoration: none; font-size: 0.9em; }
+.back-top:hover { text-decoration: underline; }
+
+/* ── footer ── */
+footer { text-align: center; color: #64748b; font-size: 0.85em; padding: 32px 0 24px; border-top: 1px solid #1e293b; margin-top: 40px; }
+footer a { color: #60a5fa; text-decoration: none; }
+
+@media (max-width: 768px) {
+  header h1 { font-size: 1.8em; }
+  .section { padding: 20px 16px; }
+  .container { padding: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>IVE 迷因百科</h1>
+  <p class="subtitle">芙學 · 宮鬥 · 梗圖 · 飯圈黑話完全指南</p>
+  <p class="subtitle" style="margin-top:4px; font-size:0.9em;">Last updated: 2026-02-13</p>
+</header>
+
+<!-- ══════════════ TABLE OF CONTENTS ══════════════ -->
+<nav class="toc">
+  <h2>目錄 Table of Contents</h2>
+  <ol>
+    <li><a href="#glossary">基礎詞彙表 — 六芙、DIVE、飯圈術語</a></li>
+    <li><a href="#fuxue">芙學（Fuology）— 起源與解析</a></li>
+    <li><a href="#gongdou">宮鬥（Palace Intrigue）— 事件時間線</a></li>
+    <li><a href="#lucky-vicky">Lucky Vicky — 員瑛式思考</a></li>
+    <li><a href="#iconic-moments">名場面 — 經典病毒式片段</a></li>
+    <li><a href="#member-memes">成員專屬梗</a></li>
+    <li><a href="#chemistry">CP 名 &amp; Chemistry</a></li>
+    <li><a href="#weibo-slang">微博/豆瓣黑稱與粉圈內梗</a></li>
+    <li><a href="#wonyoungism">元英主義（Wonyoungism）— 文化現象</a></li>
+    <li><a href="#pharmacy">員瑛藥局（Wonyoung Pharmacy）— 抖音爭議梗</a></li>
+    <li><a href="#heya">HEYA · 香港國家事件 — 辱華風波</a></li>
+    <li><a href="#kaihe">開盒事件 — 百度副總裁女兒</a></li>
+    <li><a href="#platforms">平台生態 — Bilibili / Threads / Douyin / 貼吧 / LIHKG</a></li>
+    <li><a href="#sources">資料來源</a></li>
+  </ol>
+</nav>
+
+<!-- ══════════════ 1. GLOSSARY ══════════════ -->
+<div class="section" id="glossary">
+  <h2><span class="emoji">📖</span>基礎詞彙表</h2>
+
+  <table class="wiki-table">
+    <thead>
+      <tr><th>術語</th><th>含義</th><th>備註</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>六芙</strong></td>
+        <td>IVE 六位成員的合稱。「芙」取自 IVE 的中文諧音「艾<em>芙</em>」</td>
+        <td>中文圈專用</td>
+      </tr>
+      <tr>
+        <td><strong>DIVE</strong></td>
+        <td>IVE 官方粉絲名，來自「<strong>D</strong>ive <strong>i</strong>nto I<strong>VE</strong>」</td>
+        <td>2021-12-09 公布</td>
+      </tr>
+      <tr>
+        <td><strong>芙學</strong></td>
+        <td>「芙」（IVE）+ 「學」（學問），指圍繞 IVE 成員間互動的過度解讀與造謠產業鏈</td>
+        <td>詳見<a href="#fuxue">第2節</a></td>
+      </tr>
+      <tr>
+        <td><strong>宮鬥</strong></td>
+        <td>借用宮廷劇概念，指粉絲將成員間正常互動解讀為「暗中較勁」</td>
+        <td>詳見<a href="#gongdou">第3節</a></td>
+      </tr>
+      <tr>
+        <td><strong>毒唯</strong></td>
+        <td>「有毒的唯飯」，只喜歡團體中一位成員並攻擊其他成員的極端粉絲</td>
+        <td>芙學的主要推手</td>
+      </tr>
+      <tr>
+        <td><strong>團飯</strong></td>
+        <td>喜歡整個團體所有成員的粉絲（與「唯飯」對立）</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>營銷號</strong></td>
+        <td>靠製造爭議賺流量的自媒體帳號，芙學內容的主要散播者</td>
+        <td>多見於 Bilibili、抖音</td>
+      </tr>
+      <tr>
+        <td><strong>C 位</strong></td>
+        <td>Center 位，舞台正中央的最顯眼位置</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>表情管理</strong></td>
+        <td>偶像在鏡頭前控制面部表情的能力，常被放大檢視</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>修羅場</strong></td>
+        <td>借用日漫用語「阿修羅場」，指成員間氣氛劍拔弩張的瞬間（如搶 C 位、搶獎盃）</td>
+        <td>芙學核心用語</td>
+      </tr>
+      <tr>
+        <td><strong>出圈</strong></td>
+        <td>超出粉絲圈被路人知曉，例如「Lucky Vicky 出圈了」</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>倒油</strong></td>
+        <td>公司或營銷號故意製造成員間的對立素材，「往火上倒油」</td>
+        <td>常用於指責 Starship</td>
+      </tr>
+      <tr>
+        <td><strong>艷壓</strong></td>
+        <td>在同框畫面中以顏值/氣場「壓制」對方，紅毯和頒獎典禮的經典話題</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>消音</strong></td>
+        <td>移除伴奏只留人聲的影片，用來檢驗偶像真實唱功。IVE 消音影片是 B 站熱門類別</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>腦補</strong></td>
+        <td>「腦內補完」，粉絲對模糊畫面自行腦補劇情的行為，芙學的本質</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>佛系追星</strong></td>
+        <td>佛系 = 隨緣。IVE 貼吧自稱「佛系追星的萌萌人」，但實際飯圈極不佛系</td>
+        <td>IVE 吧吧規用語</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>芙花名系統（成員中文代稱）</h3>
+  <p>中文粉圈為每位成員分配「<strong>芙 + X</strong>」的花名，用於微博、貼吧等平台的日常討論：</p>
+  <table class="wiki-table">
+    <thead><tr><th>花名</th><th>成員</th><th>由來</th><th>其他暱稱</th></tr></thead>
+    <tbody>
+      <tr><td><strong>芙隊</strong></td><td>安俞真</td><td>隊 = 隊長</td><td>安安</td></tr>
+      <tr><td><strong>芙圓</strong></td><td>張員瑛</td><td>圓 ← 員/元</td><td>圓圓、小圓、公主</td></tr>
+      <tr><td><strong>芙秋</strong></td><td>Gaeul</td><td>秋 = 秋天（가을直譯）</td><td>秋秋</td></tr>
+      <tr><td><strong>芙憐</strong></td><td>Rei</td><td>憐 ← 直井怜</td><td>麻薯、怜怜</td></tr>
+      <tr><td><strong>芙栗</strong></td><td>Liz</td><td>栗 = 栗子（Liz 諧音）</td><td>栗子、麗茲</td></tr>
+      <tr><td><strong>芙忙</strong></td><td>Leeseo</td><td>忙 ← 忙內（막내/老么）</td><td>李瑞、老六、芒內、芒果、小壯</td></tr>
+    </tbody>
+  </table>
+  <p>對應的唯飯分類：<strong>員唯</strong>（員瑛唯飯）、<strong>秋唯</strong>、<strong>怜唯</strong>、<strong>栗唯</strong> 等。團飯則稱「<strong>團芙</strong>」。</p>
+</div>
+
+<!-- ══════════════ 2. 芙學 ══════════════ -->
+<div class="section" id="fuxue">
+  <h2><span class="emoji">🔬</span>芙學（Fuology）</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-blue">Bilibili</span>
+    <span class="tag tag-purple">Threads</span>
+    <span class="tag tag-pink">抖音</span>
+    <span class="tag tag-green">PTT</span>
+    <span class="tag tag-yellow">Dcard</span>
+  </div>
+
+  <h3>定義</h3>
+  <p>
+    「<strong>芙學</strong>」是中文飯圈對 IVE 團內「宮鬥」素材的戲謔總稱，字面意思是「關於芙（IVE）的學問」。
+    它涵蓋了一整套「證據蒐集 → 影片剪輯 → 腦補解讀 → 傳播擴散」的網路造謠產業鏈。
+  </p>
+
+  <h3>起源</h3>
+  <p>
+    芙學的始作俑者並非外部黑粉，而是 IVE 粉絲內部的<strong>毒唯</strong> — 主要是安俞真（Yujin）和張員瑛（Wonyoung）各自的個人粉絲陣營。
+    兩方長期互相攻擊，攻擊方式包括：
+  </p>
+  <ul>
+    <li>截取模糊畫面聲稱「某人對另一人翻白眼」</li>
+    <li>放大走位差異解讀為「故意搶 C 位」</li>
+    <li>將無關表情剪輯成「不屑」「嫌棄」的敘事</li>
+    <li>以《甄嬛傳》等宮鬥劇的框架重新配音、配字幕</li>
+  </ul>
+
+  <h3>為什麼有人信？</h3>
+  <p>
+    根據 Dcard 使用者 <a href="https://www.dcard.tw/@mynameisfrank/post/257532255" target="_blank">@mynameisfrank</a> 的分析文章〈詳細拆解！年度造謠 IVE「芙學」為何會有人信？〉，芙學之所以能擴散，核心原因包括：
+  </p>
+  <ol>
+    <li><strong>人氣差距的客觀存在</strong> — 員瑛的個人流量與商業資源遠超其他成員，造成「公司偏心」的既定印象</li>
+    <li><strong>短影片的碎片化</strong> — 幾秒鐘的截圖／GIF 脫離上下文後很容易被曲解</li>
+    <li><strong>營銷號推波助瀾</strong> — 中國平台（Bilibili、抖音）的營銷號靠宮鬥內容賺取大量流量</li>
+    <li><strong>甄嬛傳效應</strong> — 看慣宮鬥劇的觀眾傾向用「互相算計」的框架解讀一切微表情</li>
+  </ol>
+
+  <div class="info-box">
+    <div class="label">澄清</div>
+    <p>芙學本質上是<strong>虛構的宮鬥敘事</strong>，並非基於任何已證實的成員不合。安俞真與張員瑛自 2018 年《PRODUCE 48》時期便是同期練習生與隊友，共同經歷 IZ*ONE 及 IVE 出道，有超過八年的合作關係。2025年1月兩人一同出演韓國綜藝《劉Quiz》，全程互動親密自然。</p>
+  </div>
+
+  <h3>Bilibili 上的芙學生態</h3>
+  <p>在 Bilibili 上搜尋「IVE 芙學」或「IVE 宮鬥」可以找到大量影片，主要分為兩類：</p>
+  <ul>
+    <li><strong>認真解讀派</strong> — 如〈<a href="https://www.bilibili.com/video/BV1QamKYwEzA/" target="_blank">芙學·IVE後宮傳｜安宥真女王大戰heya篇</a>〉，以宮鬥劇的方式重新剪輯成員互動</li>
+    <li><strong>搞笑反諷派</strong> — 如〈<a href="https://www.bilibili.com/video/BV1BkBBYGEqX/" target="_blank">年末芙學，不笑賠錢</a>〉，以幽默態度消解芙學的荒謬性</li>
+  </ul>
+</div>
+
+<!-- ══════════════ 3. 宮鬥 ══════════════ -->
+<div class="section" id="gongdou">
+  <h2><span class="emoji">⚔️</span>宮鬥（Palace Intrigue）事件時間線</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-blue">Bilibili</span>
+    <span class="tag tag-purple">Threads</span>
+    <span class="tag tag-green">PTT</span>
+    <span class="tag tag-pink">TikTok</span>
+  </div>
+
+  <p>以下為被中文圈粉絲反覆討論的「宮鬥名場面」。需注意：這些事件幾乎全部存在<strong>斷章取義</strong>或<strong>過度解讀</strong>的成分。</p>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="date">2022 — 出道初期</div>
+      <div class="event">
+        IVE 舞台造型中，員瑛經常穿著與其他成員明顯不同的服裝（例如全白 vs 全黑），被解讀為「公司偏心」「員瑛的 solo 舞台」。實際上這是 K-pop 中 center 的常見造型區分。
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2024 年末 — MAMA Awards</div>
+      <div class="event">
+        2024 MAMA 頒獎典禮上，有網友聲稱安俞真在 Group 5 環節「打斷」員瑛的喊場。相關影片在 Bilibili 上被大量轉發，標題如〈<a href="https://www.bilibili.com/video/BV1LgzGYAECj/" target="_blank">安宥真G5打斷張元英喊場？芙學新素材REACTION！</a>〉。但完整影片顯示這只是同時說話的自然互動。
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2024 年末 — 紅毯走位爭議</div>
+      <div class="event">
+        年末頒獎典禮紅毯上，IVE 被批評走位看起來像「宮鬥」。K-POP Podcast〈<a href="https://open.firstory.me/story/cm5afv4gc01v701slgoksgf8k" target="_blank">K-POP相談室 EP.19</a>〉專題討論了此現象，分析人氣不均可能造成的視覺效果。安俞真和員瑛站中間 C 位，其他成員被視為「配角」。
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2025-01-10 — 金唱片獎「搶獎盃」事件</div>
+      <div class="event">
+        第 40 屆金唱片獎（於台北大巨蛋舉辦），IVE 獲頒「全球 K-POP 藝人獎」。員瑛率先走到舞台中央拿起獎盃站到麥克風前，有網友放大安俞真斜眼看員瑛的瞬間，解讀為「翻白眼」。
+        <br><br>
+        影片在 <a href="https://www.kpopn.com/2025/01/08/news-ive-gda-awards-interaction" target="_blank">Kpopn</a>、<a href="https://www.juksy.com/article/130701" target="_blank">JUKSY</a> 等媒體報導後瘋傳。網友反應兩極：
+        <br>
+        批評派：「獎盃不是應該給隊長嗎？搶得像在搶命一樣」<br>
+        澄清派：「被這種後製內心戲加滿的影片帶風向就覺得好笑」
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2024 — 踩裙事件</div>
+      <div class="event">
+        某公開活動中，員瑛在 C 位拍照時被指踩到了安俞真的高訂禮服裙擺，甚至有網友聲稱她「踢了好幾下」。這個畫面在豆瓣和 B 站被大量截圖分析，成為芙學「Mean 感」敘事的關鍵證據之一。
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">2025-01-15 —《劉Quiz》EP276</div>
+      <div class="event">
+        安俞真與員瑛一同出演韓國人氣綜藝《劉Quiz on the Block》，全程互動自然融洽。員瑛談到「Lucky Vicky」的起源，安俞真分享作為隊長的心路歷程。被團飯視為對芙學的最強反擊。<a href="https://www.bilibili.com/video/BV16xwGehE8h/" target="_blank">[B站中字]</a>
+      </div>
+    </div>
+
+  </div>
+
+  <h3>甄芙傳 — B 站同人劇集</h3>
+  <p>
+    B 站用戶以《甄嬛傳》（中國經典宮鬥劇）為模板，將 IVE 成員的互動素材重新剪輯配音，製作了系列同人影片<strong>《甄芙傳》</strong>（Zhen Fu Zhuan）。
+    該系列已更新至少 10 集（<a href="https://www.bilibili.com/video/BV1ob4deyEw6/" target="_blank">第 10 集</a>），將安俞真設定為「女王」、員瑛為「寵妃」，其他成員各有宮廷角色。
+    這是芙學從「分析素材」升級為「完整敘事創作」的代表作。
+  </p>
+
+  <div class="info-box">
+    <div class="label">Threads 上的反應</div>
+    <p>Threads 用戶 <a href="https://www.threads.com/@she11y._/post/DCDubdtyscf/" target="_blank">@she11y._</a> 精闢總結了許多路人的心態：「IVE 成員一個不知道，宮鬥看得津津有味」 — 反映了許多人其實不追 IVE，但把芙學當連續劇看。</p>
+  </div>
+</div>
+
+<!-- ══════════════ 4. LUCKY VICKY ══════════════ -->
+<div class="section" id="lucky-vicky">
+  <h2><span class="emoji">🍀</span>Lucky Vicky — 員瑛式思考</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-pink">全平台爆紅</span>
+    <span class="tag tag-yellow">2024 年度梗</span>
+  </div>
+
+  <h3>定義</h3>
+  <p>
+    「<strong>Lucky Vicky</strong>」（럭키비키）是由張員瑛發起的正向思考迷因，核心理念是<strong>將日常中的小挫折重新詮釋為幸運事件</strong>。
+    「Vicky」是員瑛自幼使用的英文名，取自勝利女神 Victoria，由母親命名。
+  </p>
+
+  <h3>起源故事</h3>
+  <blockquote>
+    IVE 世界巡迴期間，員瑛在西班牙一家麵包店排隊購買巧克力麵包，結果前面的客人買走了最後一個。員瑛不但沒有失望，反而開心地說：「太幸運了！因為賣完了，所以我可以買到剛出爐的新鮮麵包！Lucky Vicky！」
+  </blockquote>
+
+  <h3>病毒式傳播</h3>
+  <ul>
+    <li>2024 年成為韓國最火爆的網路迷因之一</li>
+    <li>甚至連 ChatGPT 都被訓練出「<a href="https://www.koreaboo.com/news/ive-jang-wonyoung-lucky-vicky-meme-so-popular-even-chatgpt/" target="_blank">Lucky Vicky 模式</a>」</li>
+    <li>粉絲製作「員瑛式思考產生器」AI 工具</li>
+    <li>Amore Pacific 品牌重塑研討會引用此概念</li>
+    <li>IVE 歌曲〈ATTITUDE〉被視為 Lucky Vicky 哲學的音樂化表達</li>
+  </ul>
+
+  <h3>員瑛本人的回應</h3>
+  <p>
+    在《劉Quiz》中，員瑛解釋她從未刻意將「Lucky Vicky」當作特定概念 — 這只是她從小的思考方式。她強調這不是自我合理化（자기합리화），而是<strong>對日常小確幸的感恩</strong>。
+    她還透露「Lucky Vicky」的靈感部分來自佛教思想中的感恩哲學。
+    (<a href="https://www.elle.com/tw/entertainment/gossip/g63471103/ive-wonyoung-lucky-vicky/" target="_blank">ELLE 報導</a>)
+  </p>
+
+  <h3>Lucky Vicky 公式</h3>
+  <div class="info-box">
+    <div class="label">使用方法</div>
+    <p style="font-size:1.05em;">
+      遇到小挫折 → 找到反面的好處 → 用開心語氣說出「Lucky Vicky~✨」
+    </p>
+    <p style="margin-top:8px;">
+      <strong>範例：</strong><br>
+      「下雨忘帶傘？Lucky Vicky！剛好可以去便利商店買一把超可愛的新傘～」<br>
+      「電車遲到了？Lucky Vicky！多了幾分鐘可以聽完這首歌～」
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════ 5. ICONIC MOMENTS ══════════════ -->
+<div class="section" id="iconic-moments">
+  <h2><span class="emoji">🌟</span>名場面 — 經典病毒式片段</h2>
+
+  <h3>1. 員瑛轉圈（Wonyoung Spin）</h3>
+  <p>
+    IVE 演唱會中，員瑛邊走邊旋轉的優雅動作被粉絲拍下，相關影片累計<strong>超過 43 億次播放</strong>，成為 K-pop 歷史上最具病毒性的直拍片段之一。
+    大量網友挑戰模仿「張員瑛轉圈」，但因其流暢度和體態控制極難複製而爆紅。
+    (<a href="https://www.elle.com/tw/entertainment/voice/g60461301/won-young-ive-iconic-moments/" target="_blank">ELLE 十大名場面</a>)
+  </p>
+
+  <h3>2. 雙手吃草莓</h3>
+  <p>
+    IVE 上綜藝《全知干預視角》時，員瑛因為<strong>用雙手捧著吃草莓</strong>的畫面登上韓國熱搜。
+    員瑛本人事後澄清：「是草莓真的太大了！」
+    這個片段成為經典梗圖素材，衍生出大量「員瑛吃東西」系列表情包。
+  </p>
+
+  <h3>3. Wonyoung Little Dance</h3>
+  <p>
+    2022 MAMA Awards 後，員瑛在舞台上將雙手微微舉到肩膀高度、小幅度左右搖擺的動作意外爆紅，被稱為「員瑛小舞」（Wonyoung Little Dance），掀起模仿風潮。
+  </p>
+
+  <h3>4. 員瑛捏大腿</h3>
+  <p>
+    IVE 世界巡迴演唱會中，員瑛被拍到在高強度表演間隙偷偷捏自己大腿提神的畫面，粉絲心疼之餘也敬佩她的敬業精神，在中文社群被廣泛討論。
+  </p>
+
+  <h3>5. 老賴茶棧事件（AAA 頒獎典禮）</h3>
+  <p>
+    亞洲明星盛典（AAA）在<strong>高雄</strong>舉辦期間，員瑛被拍到手拿一杯<strong>老賴茶棧</strong>（台中第二市場創立的老字號珍奶品牌）。
+    笑點在於「老賴」在中國大陸網路用語中是「<strong>欠錢不還的人</strong>」（deadbeat），頂流偶像拿著一杯「老賴」的反差感引發熱議，也意外幫台灣茶飲品牌做了大型免費廣告。
+  </p>
+
+  <h3>6. 霸王茶姬 · 廣州奶茶直播（2026.01）</h3>
+  <p>
+    2026 年 1 月，IVE 廣州簽售會結束後，員瑛在飯店直播時一口氣點了 <strong>4 杯霸王茶姬</strong>，大讚「青青糯山」的味道。
+    她暫停直播用翻譯 App 查飲料名，還意外說出帶口音的中文「<strong>等一虾</strong>」（等一下），
+    登上微博熱搜。事件導致當地霸王茶姬門市發出緊急備貨通知。
+  </p>
+</div>
+
+<!-- ══════════════ 6. MEMBER MEMES ══════════════ -->
+<div class="section" id="member-memes">
+  <h2><span class="emoji">😂</span>成員專屬梗</h2>
+
+  <table class="wiki-table">
+    <thead>
+      <tr><th>成員</th><th>暱稱 / 梗</th><th>說明</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>安俞真 Yujin</strong></td>
+        <td>安狗狗、美麗瘋子、大壯、齙牙、氨油疹</td>
+        <td>「<strong>安狗狗</strong>」因月牙眼笑容像小狗而來。在《地球娛樂室》中被稱為「<strong>美麗的瘋子</strong>」。「<strong>大壯</strong>」形容搶獎盃時的霸氣。黑稱：「<strong>齙牙</strong>」嘲諷牙齒、「<strong>氨油疹</strong>」「<strong>安孕貞</strong>」為安俞真的惡意諧音</td>
+      </tr>
+      <tr>
+        <td><strong>張員瑛 Wonyoung</strong></td>
+        <td>Lucky Vicky、公主、女王、山東英子、油雞、完形填空</td>
+        <td>詳見<a href="#lucky-vicky">第4節</a>。被韓媒譽為「天生的偶像」，「<strong>公主</strong>」為粉絲尊稱，「<strong>女王</strong>」為芙學宮鬥封號。黑稱：「<strong>山東英子</strong>」（農村化改名消解公主形象）、「<strong>油雞</strong>」「<strong>油潑</strong>」（油膩衍生）、「<strong>完形填空</strong>」（嘲笑 live 只唱片段）、「<strong>豬寶寶</strong>」「<strong>饅頭</strong>」（嘲諷外貌）</td>
+      </tr>
+      <tr>
+        <td><strong>Gaeul 秋天</strong></td>
+        <td>Gaeul 前輩、秋秋姐、球球姐、松鼠、托馬斯</td>
+        <td>「<strong>Gaeul 前輩</strong>」（가을선배）彰顯團內大姐的穩重感。「秋秋姐」「球球姐」為粉絲暱稱，「<strong>松鼠</strong>」因形象可愛。黑稱「<strong>托馬斯</strong>」嘲諷其表現。在芙學中是「老實人」角色 — 不搶 C 位也不搶獎盃，總是默默站在旁邊</td>
+      </tr>
+      <tr>
+        <td><strong>Liz</strong></td>
+        <td>栗子、地理障礙、朱莉、菲力、胖貓</td>
+        <td>「<strong>栗子</strong>」= Liz 諧音。「<strong>地理障礙</strong>」— 巡迴期間把新加坡和芝加哥搞混，成為經典笑料。「<strong>整人王</strong>」— 團內最愛惡作劇的成員。<br>黑稱全圍繞身材：「<strong>朱莉/助理</strong>」（豬栗）、「<strong>菲力</strong>」（肥栗）、「<strong>胖貓</strong>」（mini IVE 形象為貓 + 身材）、「<strong>坦克</strong>」。曾因<strong>甲狀腺問題</strong>導致體重變化，後瘦身被稱「顏值大逆襲」</td>
+      </tr>
+      <tr>
+        <td><strong>Rei 直井怜</strong></td>
+        <td>呆一布、暴走天竺鼠、Kim Rei、南韓烏蘭圖雅、直頸連、井蓋、擂茶</td>
+        <td>
+          「<strong>Kim Rei</strong>」— 韓語極流利被成員戲稱的韓國化暱稱。笑聲極具感染力，被剪成各種合集。<br>
+          <strong>呆一布</strong> — 「DIVE!」的中文空耳，有<a href="https://baike.baidu.com/item/%E5%91%86%E4%B8%80%E5%B8%83/59861429" target="_blank">百度百科詞條</a>。
+          <strong>暴走天竺鼠</strong> —〈ATTITUDE〉killing part，引爆全球模仿挑戰，獲 TikTok Awards Korea 2025「最佳趨勢引領者」。
+          <strong>南韓烏蘭圖雅</strong> — 嘲諷 live 閃避高音。<br>
+          黑稱：「<strong>直頸連</strong>」（本名諧音 + 舞蹈僵硬）、「<strong>鬼子/櫃子</strong>」（日本人相關）、「<strong>擂茶</strong>」（各種陰陽隊友）、「<strong>井蓋</strong>」（直<em>井</em> + 臉圓如井蓋）
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Leeseo 李瑞</strong></td>
+        <td>老六、忙內、芒內、芒果、小壯、瑞寶、小老虎</td>
+        <td>團內最小成員（2007年生）。「<strong>老六</strong>」— 遊戲用語（陰人/偷雞摸狗），因年齡排行第六且行為個性特別符合；近期經營<strong>笨蛋人設</strong>更加鞏固此稱號。「<strong>芒內</strong>」= 忙內的暱稱變體 →「<strong>芒果</strong>」（因下顎發育）。「<strong>小壯</strong>」形容壯實體格。「<strong>瑞寶</strong>」為台灣粉絲暱稱，「<strong>小老虎</strong>」因舞台上反差萌的兇狠表情。在芙學中因 MMA 搶獎盃加入「搶獎盃宇宙」</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════ 7. CP / CHEMISTRY ══════════════ -->
+<div class="section" id="chemistry">
+  <h2><span class="emoji">💞</span>CP 名 &amp; Chemistry</h2>
+
+  <p>IVE 成員間的配對名稱（Chemistry Names）是韓飯圈的重要文化，以下為主要的 CP 稱呼：</p>
+
+  <table class="wiki-table">
+    <thead>
+      <tr><th>CP 名</th><th>成員</th><th>由來</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>雙塔 CP</strong></td>
+        <td>安俞真 + 張員瑛</td>
+        <td>兩人是團內最高的成員（皆超過 173cm），加上同為 IZ*ONE 出身，是芙學的核心但也是合作最久的搭檔</td>
+      </tr>
+      <tr>
+        <td><strong>Jjangchinz（짱친즈）</strong></td>
+        <td>員瑛 + 俞真 + Liz</td>
+        <td>「짱」取自張 Jang、「친」取自 Yujin 的 jin、「즈」取自 Liz — 三位也是團內最高的成員</td>
+      </tr>
+      <tr>
+        <td><strong>Ahkkaengz（아깽즈）</strong></td>
+        <td>Liz + Leeseo</td>
+        <td>「Baby Catz / 小貓咪」的意思 — 아(아기 baby) + 깽(고양이 cat 的縮寫)</td>
+      </tr>
+      <tr>
+        <td><strong>Chattiez（수다즈）</strong></td>
+        <td>Gaeul + 俞真 + Leeseo</td>
+        <td>三人搭同一台車上班，車程中話特別多，所以叫「話嘮三人組」</td>
+      </tr>
+      <tr>
+        <td><strong>Anniyoung</strong></td>
+        <td>俞真 + Leeseo + 員瑛</td>
+        <td>An(안) + i/yi(이瑞) + young(영) — 也是韓文問候語「안녕」的諧音</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════ 8. WEIBO SLANG ══════════════ -->
+<div class="section" id="weibo-slang">
+  <h2><span class="emoji">🀄</span>微博/豆瓣黑稱與粉圈內梗</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-red">微博</span>
+    <span class="tag tag-yellow">豆瓣</span>
+    <span class="tag tag-blue">知乎</span>
+    <span class="tag tag-pink">百度貼吧</span>
+  </div>
+
+  <p>中國大陸粉圈（微博、豆瓣、知乎）對 IVE 成員有一套獨特的暱稱與黑稱體系。黑稱多由毒唯或對家粉絲創造，部分已被粉絲「消化」轉為中性用語。</p>
+
+  <h3>張員瑛（Wonyoung）</h3>
+  <table class="wiki-table">
+    <thead><tr><th>稱呼</th><th>類型</th><th>由來</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>卵 / 卵帝</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>IZ*ONE 時期，員瑛以 C 位出道被誇為「母胎 C 位」（從出生就注定是 Center）。對家粉絲將「母胎」引申為「卵子時期就是 C 位」，簡稱「卵」。極具侮辱性。</td>
+      </tr>
+      <tr>
+        <td><strong>亂 / 亂帝</strong></td>
+        <td><span class="tag tag-green">消化後</span></td>
+        <td>粉絲為消解「卵」的負面含義，取諧音轉化為「亂」，衍生出「亂帝」（意為亂世中的帝王）。屬於粉絲「洗白黑稱」的經典案例。</td>
+      </tr>
+      <tr>
+        <td><strong>瑛子</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>黑粉長期使用的貶義暱稱，帶有輕蔑語氣。2025年8月，時尚雜誌 <strong>SuperELLE</strong> 在封面宣傳文案中誤用「瑛子」稱呼員瑛，粉絲抗議後 SuperELLE 發表致歉聲明，承認「缺乏了解」。</td>
+      </tr>
+      <tr>
+        <td><strong>山東英子</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>將員瑛的名字改成中國農村風格（「英子」= 鄉下女孩名），「山東」暗示她長得像中國北方村姑，用來消解她的「公主」形象。</td>
+      </tr>
+      <tr>
+        <td><strong>油潑 / 油雞</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>「油膩」的升級版衍生詞。「油潑」= 油潑麵（被油潑了一臉的感覺）；「油雞」= 油膩 + 雞（諧音嘲諷）。</td>
+      </tr>
+      <tr>
+        <td><strong>豬寶寶 / 饅頭</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>嘲諷員瑛臉型或身材的貶稱。「饅頭」形容臉圓。</td>
+      </tr>
+      <tr>
+        <td><strong>女王</strong></td>
+        <td><span class="tag tag-yellow">梗稱</span></td>
+        <td>芙學宮鬥體系中的封號，與「安皇」對立。@oiloeoilga 梗文中常用「員瑛女王」。</td>
+      </tr>
+      <tr>
+        <td><strong>移速怪</strong></td>
+        <td><span class="tag tag-yellow">梗稱</span></td>
+        <td>源自員瑛在紅毯和頒獎典禮上總是走得比其他成員快、率先到達 C 位的現象。粉絲用遊戲 Patch Notes 語氣呼籲「削弱張員瑛的移速」。</td>
+      </tr>
+      <tr>
+        <td><strong>油英 / 油膩</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>「油」= 油膩（greasy）。批評員瑛的表情管理「太刻意」「太嗲」，從 PRODUCE 48 時期就存在的爭議。豆瓣上「真的覺得張元英長得很油膩」vs「總有人給張元英打上油膩的標籤」是經典對線話題。</td>
+      </tr>
+      <tr>
+        <td><strong>C 位癌</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>「C 位 + 癌症」，指控員瑛病態地執著於站 C 位，不惜犧牲隊友。相關指控：搶獎盃、紅毯搶位、合照卡位。支持者反駁：她本來就是 designated center。</td>
+      </tr>
+      <tr>
+        <td><strong>Mean 感</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>中英混合詞，指員瑛被認為帶有「Mean Girl」（刻薄女孩）的氣場。主要「證據」包括翻白眼事件、踩裙事件、以及對其他成員疑似冷漠的表情。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>安俞真（Yujin）</h3>
+  <table class="wiki-table">
+    <thead><tr><th>稱呼</th><th>類型</th><th>由來</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>安狗 / 安狗狗</strong></td>
+        <td><span class="tag tag-green">暱稱</span></td>
+        <td>笑起來像開心的小狗（月牙眼 + 燦爛笑容），粉絲暱稱。後被芙學家們反用，在宮鬥語境下變成「爛狗」「狗叫」等調侃。</td>
+      </tr>
+      <tr>
+        <td><strong>安大壯</strong></td>
+        <td><span class="tag tag-yellow">梗稱</span></td>
+        <td>形容安俞真在頒獎典禮上「強勢搶獎盃」的霸氣形象。「大壯」有壯碩、強勢之意。在芙學語境中常見。</td>
+      </tr>
+      <tr>
+        <td><strong>安皇 / 皇族</strong></td>
+        <td><span class="tag tag-yellow">梗稱</span></td>
+        <td>芙學宮鬥體系中對安俞真的封號，暗示她是後宮中的「皇帝」角色，其他成員需臣服。「皇族」為延伸用法。</td>
+      </tr>
+      <tr>
+        <td><strong>齙牙</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>嘲諷安俞真的牙齒外觀。</td>
+      </tr>
+      <tr>
+        <td><strong>氨油疹</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>「安俞真」的惡意諧音，讀起來像皮膚病名稱。</td>
+      </tr>
+      <tr>
+        <td><strong>安孕貞</strong></td>
+        <td><span class="tag tag-red">黑稱</span></td>
+        <td>將「俞」改為「孕」（懷孕），惡意諧音攻擊。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>雙塔關係用語</h3>
+  <table class="wiki-table">
+    <thead><tr><th>術語</th><th>含義</th></tr></thead>
+    <tbody>
+      <tr><td><strong>宥元離婚感</strong></td><td>形容俞真和員瑛在某些場合表現得像「離婚夫妻」般冷漠疏離的氣氛。與修羅場類似，但更強調「冷戰」而非「衝突」。</td></tr>
+      <tr><td><strong>修羅場</strong></td><td>借用日漫「阿修羅場」，指兩人同框時劍拔弩張的場面，尤其是搶 C 位和搶獎盃的瞬間。</td></tr>
+      <tr><td><strong>倒油</strong></td><td>指 Starship 公司被懷疑故意安排容易引發芙學的場景（如讓兩人同時走向獎盃），「往火上倒油」。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>其他成員</h3>
+  <table class="wiki-table">
+    <thead><tr><th>成員</th><th>稱呼</th><th>說明</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Gaeul</strong></td>
+        <td>秋天 / 秋秋姐 / 球球姐 / 松鼠</td>
+        <td>官方微博中文藝名為「秋天」。粉絲暱稱「秋秋姐」「球球姐」（秋秋諧音）。在芙學中常被描述為「老實人」角色。<br><span class="tag tag-red">黑稱</span> <strong>托馬斯</strong> — 嘲諷其舞台表現或外貌。</td>
+      </tr>
+      <tr>
+        <td><strong>Liz</strong></td>
+        <td>栗子 / 朱莉 / 助理 / 菲力 / 胖貓</td>
+        <td>「栗子」為 Liz 的中文諧音暱稱。<br><span class="tag tag-red">黑稱</span> <strong>朱莉 / 助理</strong>（豬栗 = 豬 + 栗子）、<strong>菲力</strong>（肥栗 = 肥 + 栗子）— 皆為嘲諷身材的諧音黑稱。<br><strong>胖貓</strong> — mini IVE 中 Liz 的形象為貓，因體型被加上「胖」字。</td>
+      </tr>
+      <tr>
+        <td><strong>Rei</strong></td>
+        <td>怜 / 直頸連 / 擂茶 / 井蓋</td>
+        <td>官方微博用「怜」。<br><span class="tag tag-red">黑稱</span> <strong>直頸連</strong>（本名「直井怜」諧音，嘲諷她舞蹈動作僵硬、脖子不動）。<strong>鬼子 / 櫃子</strong>（「鬼子」因她是日本人；「櫃子」為諧音衍生）。<strong>擂茶</strong>（因為各種陰陽隊友的行為 — 擂 = 暗中搞事）。<strong>井蓋</strong>（「井」取自直<em>井</em>怜，「蓋」形容臉圓）。在芙學中因「搶不到獎盃」成為梗。</td>
+      </tr>
+      <tr>
+        <td><strong>Leeseo</strong></td>
+        <td>李瑞 / 老六 / 芒內 / 芒果 / 小壯</td>
+        <td>官方微博用「李瑞」。<br><strong>老六</strong> — 遊戲用語（CS:GO 第六人 = 陰人），因李瑞在團內年齡排行老六（最小），加上行為個性特別符合「老六」的偷雞摸狗感。近期經營<strong>笨蛋人設</strong>而更加鞏固此稱號。<br><strong>芒內</strong>（忙內的暱稱變體）→ 衍生出<strong>芒果</strong>（因下顎發育特徵）。<br><strong>小壯</strong> — 形容其壯實的體格。在芙學中因 MMA 搶獎盃而加入「搶獎盃宇宙」。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>其他微博粉圈用語</h3>
+  <table class="wiki-table">
+    <thead><tr><th>術語</th><th>含義</th></tr></thead>
+    <tbody>
+      <tr><td><strong>消化黑稱</strong></td><td>粉絲將黑稱轉化為中性或正面稱呼的行為（如「卵」→「亂」）</td></tr>
+      <tr><td><strong>花名</strong></td><td>粉圈對偶像的暱稱體系，分「白名」（正面）和「黑名」（負面）</td></tr>
+      <tr><td><strong>開盒</strong></td><td>人肉搜索 + 公開個人資料，詳見<a href="#kaihe">下一節</a></td></tr>
+      <tr><td><strong>控評</strong></td><td>粉絲有組織地在評論區刷正面留言、壓制負面言論</td></tr>
+      <tr><td><strong>塌房</strong></td><td>偶像因醜聞導致人設崩塌（如辱華、戀愛曝光等）</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════ 元英主義 ══════════════ -->
+<div class="section" id="wonyoungism">
+  <h2><span class="emoji">💪</span>元英主義（Wonyoungism）</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-pink">TikTok/抖音</span>
+    <span class="tag tag-yellow">小紅書</span>
+    <span class="tag tag-blue">YouTube</span>
+    <span class="tag tag-red">爭議</span>
+  </div>
+
+  <h3>定義</h3>
+  <p>
+    「<strong>元英主義</strong>」（Wonyoungism / 원영주의）是一個從 TikTok 起源、席捲全球的生活方式潮流，核心理念是以張員瑛為偶像模板進行<strong>自律（자율）+ 自愛（자애）</strong>的極致自我管理。
+  </p>
+
+  <h3>內容特徵</h3>
+  <ul>
+    <li>影片配上員瑛的舞台直拍或日常片段</li>
+    <li>疊加勵志文案如「I can't cry over you, it's bad for my skin」</li>
+    <li>推廣員瑛式日常：冰美式咖啡、早起、健身、護膚、營養補充品</li>
+    <li>強調「大女主」（boss woman）心態 — 拒絕「躺平」，追求完美</li>
+  </ul>
+
+  <h3>爭議</h3>
+  <p>
+    中國媒體 <a href="https://www.biede.com/wonyoungism-when-self-improvement-becomes-an-aesthetic/" target="_blank">BIE（別的）</a>發表評論文章批評：當「自我提升變成一種流量密碼」，它可能成為壓迫年輕女性進行有毒自我優化的陷阱，而非真正的身心健康。
+  </p>
+  <ul>
+    <li><strong>身體焦慮</strong> — 許多 Wonyoungism 影片創作者明顯過瘦，本質是包裝成「自律」的促厭食內容</li>
+    <li><strong>單一審美標準</strong> — 推崇「白幼瘦」（白皮膚、幼態臉、纖瘦身材）為唯一正解</li>
+    <li><strong>員瑛本人回應</strong> — 2021 年直播中，員瑛曾勸導未成年粉絲不要節食，稱這對身體有害</li>
+  </ul>
+
+  <div class="info-box">
+    <div class="label">與 Lucky Vicky 的對比</div>
+    <p>
+      Lucky Vicky 強調<strong>心態上的正向重構</strong>（把壞事想成好事），是輕鬆有趣的。<br>
+      元英主義則強調<strong>行為上的極致自律</strong>（健身、護膚、飲食控制），有時會走向極端。<br>
+      兩者都以員瑛為中心，但一個是快樂哲學，另一個是紀律哲學。
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════ 員瑛藥局 ══════════════ -->
+<div class="section" id="pharmacy">
+  <h2><span class="emoji">💊</span>員瑛藥局（Wonyoung Pharmacy）</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-pink">抖音</span>
+    <span class="tag tag-blue">Bilibili</span>
+    <span class="tag tag-yellow">豆瓣</span>
+    <span class="tag tag-red">爭議</span>
+  </div>
+
+  <h3>定義</h3>
+  <p>
+    「<strong>員瑛藥局</strong>」（又寫作「元英藥房」「員瑛藥房」）是一個起源於抖音的迷因格式。
+    核心設定是：張員瑛開了一間「藥局」，專門給其他女偶像開藥，讓她們「吃了變醜」或「吃了變胖」。
+  </p>
+
+  <h3>影片格式</h3>
+  <p>典型的「員瑛藥局」影片遵循固定模板：</p>
+  <ol>
+    <li>以「歡迎來到員瑛藥局」作為開場</li>
+    <li>展示張員瑛的精修美照或直拍截圖（暗示她是「完美的藥劑師」）</li>
+    <li>依序展示其他女偶像/女明星的<strong>不修圖、抓拍、表情崩壞</strong>等不雅截圖</li>
+    <li>配上字幕如「XX 吃了員瑛開的藥」「XX 的藥效發作了」</li>
+    <li>暗示這些偶像之所以「不好看」是因為吃了員瑛的藥</li>
+  </ol>
+
+  <h3>為什麼爆紅？</h3>
+  <ul>
+    <li><strong>張員瑛的流量效應</strong> — 員瑛作為「4代最頂流女偶像」自帶巨大關注度，任何以她為主角的梗都容易獲得播放量</li>
+    <li><strong>比較心理</strong> — 利用人們對「美貌比較」的天然好奇心，用反差圖製造娛樂效果</li>
+    <li><strong>模板易複製</strong> — 格式簡單，只需要拼接美照和醜照，任何人都能製作</li>
+  </ul>
+
+  <h3>爭議</h3>
+  <p>
+    這個梗在豆瓣和微博上引發了<strong>極大爭議</strong>，批評聲浪遠大於支持：
+  </p>
+  <ul>
+    <li><strong>Body Shaming（身材羞辱）</strong> — 本質上是「用一個人的美照嘲笑其他人的醜照」，是赤裸裸的外貌攻擊</li>
+    <li><strong>女性互害敘事</strong> — 將女性偶像之間塑造成「美貌競爭」關係，強化了「女人之間只會互相比較外表」的刻板印象</li>
+    <li><strong>圖片惡意截取</strong> — 所謂「變醜」的照片多為刻意截取的不利角度、表情崩壞瞬間或未修圖的抓拍，並非真實對比</li>
+    <li><strong>引戰工具</strong> — 被各家粉絲視為「拉踩」（用吹捧一方來貶低另一方），導致多個粉絲群體之間爆發罵戰</li>
+    <li><strong>員瑛粉絲也反對</strong> — 許多員瑛粉絲（卵唯/瑛唯）公開反對此梗，認為這會讓員瑛被扣上「踩其他女偶像」的帽子，反而損害員瑛的形象</li>
+  </ul>
+
+  <blockquote>
+    豆瓣用戶評論：「員瑛藥局本質就是『我家哥哥/姐姐最好看，別人都是醜的』的升級版，披了個搞笑的皮但核心就是拉踩。」
+  </blockquote>
+
+  <div class="info-box">
+    <div class="label">平台分布</div>
+    <p>
+      <strong>抖音</strong>：主要傳播地，搜尋「員瑛藥局」「元英藥房」可找到大量影片，部分已因投訴被下架<br>
+      <strong>Bilibili</strong>：有解析/反諷類影片，如〈<a href="https://www.bilibili.com/video/BV1UJ4m1a7XS/" target="_blank">員瑛藥局到底是什麼梗？</a>〉<br>
+      <strong>豆瓣</strong>：多為批評討論，<a href="https://www.douban.com/group/topic/301911245/" target="_blank">相關討論帖</a>中大部分回覆持負面態度<br>
+      <strong>微博</strong>：粉絲間互撕的主戰場，員瑛粉絲與被拉踩偶像的粉絲多次爆發衝突
+    </p>
+  </div>
+
+  <h3>與芙學的關聯</h3>
+  <p>
+    「員瑛藥局」與芙學表面上無直接關聯 — 芙學聚焦於 IVE 團內互動，而藥局梗則是跨團的外貌比較。
+    但兩者共享同一個核心元素：<strong>以張員瑛為中心的敘事結構</strong>。
+    在芙學中，員瑛是「搶 C 位的女王」；在藥局梗中，員瑛是「讓其他人相形見絀的藥劑師」。
+    兩者都反映了員瑛作為 4 代頂流偶像在飯圈中的極端「中心化」現象。
+  </p>
+</div>
+
+<!-- ══════════════ 9. HEYA ══════════════ -->
+<div class="section" id="heya">
+  <h2><span class="emoji">🎭</span>HEYA · 香港國家事件 — 辱華風波</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-red">爭議</span>
+    <span class="tag tag-blue">Bilibili</span>
+    <span class="tag tag-pink">抖音</span>
+  </div>
+
+  <p>
+    2024 年 4 月，IVE 發行單曲〈HEYA〉，MV 中大量使用了<strong>中國傳統文化元素</strong>，包括：
+  </p>
+  <ul>
+    <li>中國結、祥雲紋、摺扇</li>
+    <li>繡花鞋、水墨畫風格背景</li>
+    <li>傳統東方宮廷美學造型</li>
+  </ul>
+  <p>
+    然而 IVE 方面在宣傳中將這些元素定位為「韓國傳統文化之美」，引發中國網友的強烈不滿，認為這是<strong>文化挪用（cultural appropriation）</strong>。
+    此事件在 Bilibili 和抖音上引起廣泛討論，部分中國粉絲發起抵制。
+  </p>
+  <p>
+    諷刺的是，HEYA 的宮廷風造型反而為「芙學 · 宮鬥」的梗提供了完美的視覺素材 — Bilibili 上出現了大量以 HEYA 造型重新剪輯的「IVE 後宮傳」系列影片。
+  </p>
+
+  <h3>辱華風波升級（2024-2025）</h3>
+  <p>HEYA 事件後，IVE 與中國網友的關係持續惡化：</p>
+  <ul>
+    <li>員瑛在打歌舞台佩戴傳統鳳凰金簪，對外宣稱是「韓國古典風格」</li>
+    <li>身著改良自明代馬面裙的設計款服裝，堅稱屬於「韓國傳統服飾」</li>
+    <li>中國聯通官方微博轉發相關內容並評論「情繫中國結，聯通四海心」，各地聯通官號響應</li>
+    <li>員瑛在香港活動中的言論引發進一步爭議，相關代言被抵制</li>
+  </ul>
+  <p>此事件導致 IVE 在中國大陸的商業活動和代言受到嚴重衝擊，也使得微博上的 IVE 相關討論長期處於高度對立狀態。</p>
+
+  <h3>香港「國家」事件</h3>
+  <p>
+    MAMA 頒獎典禮後台花絮中，員瑛說出「<strong>Hong Kong is my favorite country（국가）</strong>」，將香港稱為「國家」。
+    此言論在中國社交媒體上被視為<strong>分裂主義言論</strong>（中國官方立場：香港是中國的一部分），引爆更大規模的抵制：
+  </p>
+  <ul>
+    <li>24 小時內微博相關話題累計<strong>超過 5 億次閱讀、30 萬條討論</strong></li>
+    <li>多個中國品牌代言被抵制或撤回</li>
+    <li>粉絲辯論焦點：是翻譯錯誤（「地方」vs「國家」）還是真實想法？</li>
+    <li>大量相關帖文被平台刪除（控評）</li>
+  </ul>
+  <p>這是員瑛在中國市場最嚴重的「<strong>塌房</strong>」（人設崩塌）事件，與 HEYA 文化挪用合稱為 IVE 的「辱華雙殺」。</p>
+</div>
+
+<!-- ══════════════ 10. 開盒事件 ══════════════ -->
+<div class="section" id="kaihe">
+  <h2><span class="emoji">🔓</span>開盒事件 — 百度副總裁女兒（2025.03）</h2>
+
+  <div class="platform-badges">
+    <span class="tag tag-red">微博熱搜</span>
+    <span class="tag tag-yellow">重大事件</span>
+  </div>
+
+  <p>
+    2025 年 3 月，一起由 IVE 張員瑛粉絲引發的「開盒」（人肉搜索）事件震驚中國網路，成為飯圈亂象的標誌性案例。
+  </p>
+
+  <h3>事件經過</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">2025年2月 — 導火線</div>
+      <div class="event">一名孕婦在社交媒體上評論「張員瑛坐頭等艙不算辛苦」，隨即遭到員瑛粉絲的集體圍攻。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2025年3月初 — 開盒升級</div>
+      <div class="event">粉絲群體對該網友進行人肉搜索，公開其真實姓名、身分證號碼、手機號碼等個人資料，並發送辱罵簡訊和恐嚇。其中一名帶頭發起網暴的是年僅 <strong>13 歲</strong>的未成年粉絲。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2025-03-17 — 百度副總裁女兒曝光</div>
+      <div class="event">微博用戶「眼眸」被發現參與了開盒行為，且其身份為<strong>百度副總裁謝廣軍的女兒</strong>。她曾在 Discord 韓娛粉絲群中利用技術手段開盒異見者，公開醫保卡號、外賣地址、海外學校資訊等大量隱私。反過來，她本人也被反向開盒，其父月薪 22 萬元的工資截圖遭外洩。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2025-03-17 — 百度回應</div>
+      <div class="event">百度副總裁謝廣軍公開致歉，表示「深感愧疚」。百度官方澄清開盒資料來源為境外「社工庫」（暗網洩露的公民資訊資料庫），而非百度內部數據。</div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="label">社會影響</div>
+    <p>此事件引發全國性討論，央視等主流媒體以〈一問到底〉專題報導「飯圈開盒已成慣例？」，推動社會對飯圈亂象的反思。事件也再度凸顯了 K-pop 極端粉絲文化在中國的負面影響。</p>
+  </div>
+</div>
+
+<!-- ══════════════ 9. PLATFORMS ══════════════ -->
+<div class="section" id="platforms">
+  <h2><span class="emoji">📱</span>平台生態 — Bilibili / Threads / Douyin / 貼吧 / LIHKG</h2>
+
+  <h3>Bilibili（B站）</h3>
+  <p>
+    芙學內容的最大產出地。搜尋「IVE 芙學」「IVE 宮鬥」可找到數百支影片，形式包括：
+  </p>
+  <ul>
+    <li><strong>宮鬥解讀</strong> — 以甄嬛傳配音重新剪輯成員互動</li>
+    <li><strong>REACTION 影片</strong> — UP主觀看並評論芙學素材</li>
+    <li><strong>搞笑反諷</strong> — 故意誇大解讀以凸顯其荒謬</li>
+    <li><strong>闢謠整理</strong> — 團飯製作的事實查核影片</li>
+  </ul>
+  <p>代表影片：</p>
+  <ul>
+    <li><a href="https://www.bilibili.com/video/BV1BkBBYGEqX/" target="_blank">【IVE】年末芙學，不笑賠錢</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1QamKYwEzA/" target="_blank">芙學·IVE後宮傳｜安宥真女王大戰heya篇</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1AVegeyE8h/" target="_blank">IVE領獎疑似內鬥？安宥真和張元英多次甜蜜對視（bushi</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1Li421h7Ud/" target="_blank">【IVE】張元英搶C位/無禮貌合集</a></li>
+  </ul>
+
+  <hr>
+
+  <h3>Threads</h3>
+  <p>
+    台灣 IVE 粉絲的主要討論平台。代表帳號 <a href="https://www.threads.com/@oiloeoilga" target="_blank">@oiloeoilga</a>（「真正的IVE團粉」，385 followers）以反諷式芙學梗文聞名，多篇貼文破百萬瀏覽。
+  </p>
+
+  <h4>@oiloeoilga 熱門芙學梗文（按讚數排序）</h4>
+  <table class="wiki-table">
+    <thead>
+      <tr><th>讚</th><th>觀看</th><th>分享</th><th>內容</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>25.6K</strong></td><td>1.1M</td><td>7.1K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DD_dv4vRQnp" target="_blank">IVE紅毯越來越抽象了 事前沒有討論嗎？怎麼不按照站位出場？還是這兩個C位癌的連誰走最前面都要爭</a></td>
+      </tr>
+      <tr>
+        <td><strong>19.8K</strong></td><td>979K</td><td>8.1K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DEf5vX9RF9q" target="_blank">能不能削弱張員瑛的移速啊啊啊啊</a> <span class="tag tag-yellow">遊戲用語梗</span></td>
+      </tr>
+      <tr>
+        <td><strong>18.9K</strong></td><td>1.0M</td><td>5.3K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DRHJ4MikpQl" target="_blank">金秋天搶獎盃真的還得練 和你同寢室的室友多學習學習好不好</a></td>
+      </tr>
+      <tr>
+        <td><strong>13.3K</strong></td><td>294K</td><td>1.1K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DFu8IKGxUUl" target="_blank">老六啊 REI一整年沒拿過獎盃了 你就讓她一下吧</a> <span class="tag tag-green">REI 梗</span></td>
+      </tr>
+      <tr>
+        <td><strong>11.8K</strong></td><td>371K</td><td>4.7K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DEhJyOexgY1" target="_blank">金秋天宣佈參戰 金栗子宣佈參戰</a> <span class="tag tag-purple">搶獎盃宇宙</span></td>
+      </tr>
+      <tr>
+        <td><strong>3.6K</strong></td><td>929K</td><td>15.7K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DCrURMKRIBu" target="_blank">張員瑛讓安宥真三秒都能贏</a> <span class="tag tag-pink">搶C位梗</span></td>
+      </tr>
+      <tr>
+        <td><strong>1.7K</strong></td><td>288K</td><td>4.2K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DCrmUAjxHTd" target="_blank">張員瑛施放了"喊麥" 安宥真施放"狗叫"攻擊張員瑛 張員瑛豁免檢定失敗，中斷"喊麥"</a> <span class="tag tag-yellow">TRPG 梗</span></td>
+      </tr>
+      <tr>
+        <td><strong>1.5K</strong></td><td>130K</td><td>1.1K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DRFLbxDkv62" target="_blank">爛狗就愛欺負老實人 前面三個獎不去跟張員瑛搶 搶這個今天第一次拿獎盃也還沒講到話的秋天</a></td>
+      </tr>
+      <tr>
+        <td><strong>1.4K</strong></td><td>241K</td><td>2.5K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DC_pl6ExQEe" target="_blank">安宥真這招沒料 不去和員瑛女王搶C 這一腳踢得風度都沒了 別擠我秋秋阿 典中典欺善怕惡的構思</a></td>
+      </tr>
+      <tr>
+        <td><strong>1.3K</strong></td><td>346K</td><td>4.4K</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DDDqjD3xk2_" target="_blank">李瑞的搶獎盃技能也點起來了</a> <span class="tag tag-purple">搶獎盃宇宙</span></td>
+      </tr>
+      <tr>
+        <td><strong>887</strong></td><td>55.3K</td><td>614</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/DFQSgP_RR6x" target="_blank">員瑛女王冊封金秋天為首席洗腳婢</a></td>
+      </tr>
+      <tr>
+        <td><strong>706</strong></td><td>45.9K</td><td>95</td>
+        <td><a href="https://www.threads.com/@oiloeoilga/post/C-5T8sixIof" target="_blank">IVE怎麼這樣 Rei的side eye... Rei, Yujin之間好像有點心結 天哪</a> <span class="tag tag-red">最早期梗文</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <div class="label">梗文風格分析</div>
+    <p>@oiloeoilga 的芙學梗文特色在於<strong>以反諷和遊戲化語言消解宮鬥的嚴肅性</strong>：</p>
+    <ul style="margin-top:6px;">
+      <li><strong>遊戲用語系列</strong> — 用遊戲 Patch notes 語氣寫芙學（「削弱員瑛的移速」「搶獎盃技能點起來了」「宣佈參戰」）</li>
+      <li><strong>TRPG / DND 梗</strong> — 用桌遊擲骰語法描述頒獎典禮互動（「施放喊麥」「豁免檢定失敗」）</li>
+      <li><strong>搶獎盃宇宙</strong> — 將每次頒獎典禮的獎盃交接都當成一集連續劇，追蹤各成員的「搶獎盃」技能等級</li>
+      <li><strong>宮廷封號</strong> — 以古代宮廷官職戲稱成員（「員瑛女王」「首席洗腳婢」「安皇」）</li>
+    </ul>
+  </div>
+
+  <p>Threads 上的芙學討論相對理性，常見團飯出面闢謠和科普。</p>
+
+  <hr>
+
+  <h3>抖音（Douyin）</h3>
+  <p>
+    中國大陸的短影片平台，芙學的重要傳播渠道。特色內容包括：
+  </p>
+  <ul>
+    <li>「IVE 宮鬥」系列短影片，通常配上戲劇化的旁白和字幕</li>
+    <li>成員表情管理分析影片</li>
+    <li>營銷號製作的爭議性標題影片（「震驚！員瑛竟然…」類型）</li>
+    <li>「員瑛藥局」系列（詳見<a href="#pharmacy">員瑛藥局</a>章節）</li>
+    <li>「元英轉圈」模仿挑戰 — 累計<strong>80 億+</strong>微博話題閱讀量</li>
+  </ul>
+
+  <hr>
+
+  <h3>百度貼吧（Tieba）</h3>
+
+  <h4>新路過的一只吧</h4>
+  <p>
+    <a href="https://tieba.baidu.com/f?kw=%E8%B7%AF%E8%BF%87%E7%9A%84%E4%B8%80%E5%8F%AA" target="_blank">路過的一只吧</a>
+    自稱「<strong>中國最大韓流聚集、討論、交流基地</strong>」，是百度貼吧上最大的韓流綜合論壇。
+    因吧務糾紛和管理問題，用戶分裂出「<strong>新路過的一只吧</strong>」作為後繼社區。
+  </p>
+  <p>該吧特色：</p>
+  <ul>
+    <li>所有韓流粉絲群體的「世博會」— 各家粉絲在此交鋒</li>
+    <li>對韓娛新聞的反應速度極快，常有內部消息流出</li>
+    <li>IVE 相關討論頻繁，包括概念照討論（如「秋怜栗」個人照分析帖）、回歸消息、排名爭議</li>
+    <li>存在<a href="https://c.tieba.baidu.com/p/8556847190" target="_blank">「路過吧是專門罵安宥真的嗎」</a>等爭議帖，暗示該吧對安俞真存在偏見</li>
+  </ul>
+
+  <h4>成員專屬吧</h4>
+  <table class="wiki-table">
+    <thead><tr><th>貼吧名</th><th>吧規/標語</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://tieba.baidu.com/f?kw=ive" target="_blank">IVE 吧</a></td><td>「理智追星韓國女團 IVE，大家一起當<strong>佛系追星</strong>的萌萌人」（極具諷刺感的自我定位）</td></tr>
+      <tr><td><a href="https://tiebac.baidu.com/f?ie=utf-8&kw=%E5%BC%A0%E5%85%83%E8%8B%B1" target="_blank">張元英吧</a></td><td>「永遠支持元英公主」</td></tr>
+      <tr><td><a href="https://wefan.baidu.com/f?kw=%E5%AE%89%E5%AE%A5%E7%9C%9F" target="_blank">安宥真吧</a></td><td>「安安的真愛粉」</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h3>豆瓣（Douban）</h3>
+  <p>
+    豆瓣是中國深度討論型社區，IVE 相關內容主要集中在以下小組：
+  </p>
+  <ul>
+    <li><strong>豆瓣韓娛小組</strong>（<a href="https://www.douban.com/group/627382/" target="_blank">627382</a>）— 韓娛綜合討論的最大小組</li>
+    <li><strong>內韓娛觀察組</strong>（<a href="https://www.douban.com/group/724337/" target="_blank">724337</a>）— 韓娛 meta 討論</li>
+    <li><strong>鵝組</strong>（豆瓣八組）— 曾為最大娛樂八卦組，2022 年因「飯圈亂象」被封禁，2025 年 7 月有限恢復但處於「雪藏」狀態（未加入者搜不到）</li>
+  </ul>
+  <p>豆瓣上的芙學內容更偏向<strong>深度分析文</strong>而非短影片，代表性帖子包括：</p>
+  <ul>
+    <li><a href="https://www.douban.com/group/topic/310755496/" target="_blank">我剛才在B站刷到了IVE宮鬥的視頻</a></li>
+    <li><a href="https://www.douban.com/group/topic/300072320/" target="_blank">IVE 所有成員實力和舞台態度刻板印象</a></li>
+    <li><a href="https://www.douban.com/group/topic/475650603/" target="_blank">神聖梗真的好出圈啊</a>（IVE 的 EVE 聖光視覺概念如何出圈）</li>
+    <li><a href="https://www.douban.com/group/topic/475893581/" target="_blank">比芙舞台來的更早的是芙的消音</a>（消音影片討論）</li>
+    <li><a href="https://www.douban.com/doulist/155144991/" target="_blank">芙學豆列</a>（芙學相關內容策展清單）</li>
+  </ul>
+
+  <hr>
+
+  <h3>PTT / Dcard</h3>
+  <p>
+    台灣 BBS 與論壇，是芙學討論的中文深度討論場所。
+    PTT 的 <a href="https://www.ptt.cc/bbs/Marginalman/M.1732432762.A.95D.html" target="_blank">Marginalman 板</a>有專門的 IVE 宮鬥討論串，
+    Dcard 的 <a href="https://www.dcard.tw/f/ive/p/239972955" target="_blank">IVE 板</a>則有較為系統性的芙學拆解文章。
+  </p>
+
+  <hr>
+
+  <h3>TikTok（國際版）</h3>
+  <p>
+    英語圈粉絲較少使用「芙學」「宮鬥」等中文術語，但類似的 drama 討論以 <a href="https://www.tiktok.com/discover/ive-%E5%AE%AE%E5%BB%B7%E5%8A%87" target="_blank">#IVEdrama</a> 等標籤存在。主要內容為成員搞笑合集（funny moments compilation）。
+  </p>
+
+  <hr>
+
+  <h3>LIHKG（連登）</h3>
+  <p>
+    <a href="https://lihkg.com" target="_blank">LIHKG</a>（連登討論區）是香港最大的網絡論壇，相當於香港版 Reddit。IVE 在 LIHKG 擁有一個<strong>長期運營的專屬討論串系列</strong>，
+    以粵語為主要語言，討論風格與大陸/台灣截然不同。
+  </p>
+
+  <h4>[DIVE into IVE] 아이브 討論區 — 連載討論串</h4>
+  <p>
+    LIHKG 音樂台（韓國分區）的 IVE 專區以「<strong>[DIVE into IVE] 아이브 討論區</strong>」為標題，每輪討論串達 <strong>41 頁</strong>上限後開新串。
+    截至 2026 年 2 月，已連載至<strong>第 53 期</strong>（另有重啟系列至第 5 期），每期 41 頁，總計約 <strong>2,000+ 頁</strong>討論量。
+  </p>
+  <p>主要開串人（OP）包括：<strong>CHOK人</strong>、<strong>安兪真</strong>、<strong>djawlgg</strong>、<strong>Kazuha</strong>、<strong>李賢瑞Leeseo</strong> 等。</p>
+
+  <div class="info-box">
+    <div class="label">討論串歷程亮點</div>
+    <ul style="margin-top:6px;">
+      <li>(8) Eleven 十個一位！— 慶祝 Eleven 打歌十冠</li>
+      <li>(18+) 張員瑛是大家的 — 標題帶雙關暗示</li>
+      <li>(22) 初Fan Con - The Prom Queens — 首場粉絲見面會討論</li>
+      <li>(26) 迷上Liz的encore — Liz 安可直拍走紅</li>
+      <li>(31-35) 7月港場 SHOW WHAT I HAVE — <strong>香港演唱會實況</strong>，合計超過 160 頁</li>
+      <li>(37) 831901 WY YJ生日粗卡 — 員瑛和俞真生日</li>
+      <li>(41) Rebel Heart vs Attitude 一位 — 回歸打歌討論</li>
+      <li>(47) 4th EP &lt;IVE SECRET&gt; 大發 — 第四張 EP 回歸</li>
+      <li>(49) WORLD TOUR SHOW WHAT I AM — 世巡討論</li>
+      <li>(53) 正規二 IVE REVIVE+ 宣傳中 — 最新回歸</li>
+    </ul>
+  </div>
+
+  <h4>粵語專屬暱稱</h4>
+  <p>LIHKG 用戶使用獨特的<strong>粵語暱稱</strong>稱呼 IVE 成員，與大陸/台灣的叫法不同：</p>
+  <table class="wiki-table">
+    <thead><tr><th>成員</th><th>LIHKG 粵語暱稱</th></tr></thead>
+    <tbody>
+      <tr><td><strong>安俞真</strong></td><td>安狗狗、小狗、安弟弟、牙真、負九盲犬（諧音梗）、阿儀</td></tr>
+      <tr><td><strong>張員瑛</strong></td><td>瑛妹、兔子忙內、102、奶b</td></tr>
+      <tr><td><strong>金秋天</strong></td><td>秋秋、秋天前輩、祖母（反差萌）、樹懶</td></tr>
+      <tr><td><strong>Liz</strong></td><td>栗子、音色妖精、起司貓咪、小黑貓、番茄、牙栗</td></tr>
+      <tr><td><strong>Rei</strong></td><td>金Rei、Rei妹、豆順</td></tr>
+      <tr><td><strong>Leeseo</strong></td><td>瑞瑞、瑞b、小老虎</td></tr>
+    </tbody>
+  </table>
+  <p>
+    LIHKG 用戶也常以 IVE 成員名為暱稱註冊，如「<strong>for_everyoung10</strong>」（forever young + 員瑛）、「<strong>安俞真世界第一</strong>」、「<strong>謝謝你，賢瑞</strong>」、「<strong>張員瑛桃小嘴</strong>」等。
+    另有 <a href="https://groups.hk/51253461779/IVE-LIHKG-GROUP" target="_blank">IVE LIHKG GROUP</a> Telegram 群組（約 178 名成員）。
+  </p>
+
+  <h4>LIHKG 宮鬥討論</h4>
+  <p>
+    LIHKG 對宮鬥的討論帶有鮮明的<strong>粵語網絡文化色彩</strong>，借用 TVB 宮廷劇概念。代表帖文：
+  </p>
+  <ul>
+    <li>「<strong>「宮鬥」聽講女團ive隊內不和</strong>」— 以連登特有的標題黨風格引發討論</li>
+    <li>常見用語：<strong>盲誇</strong>（盲目吹捧）、<strong>盲diss</strong>（盲目貶損）、<strong>瑛黑</strong>（員瑛 anti）、<strong>護員軍</strong>（員瑛護衛隊）</li>
+    <li>成員人氣排名被直白地表達為：「<strong>雙塔 &gt; 秋天 &gt; Liz &gt; 其他</strong>」</li>
+  </ul>
+
+  <h4>張員瑛 LIHKG 專屬討論帖</h4>
+  <p>搜尋「張員瑛」可找到 <strong>20+ 個獨立帖</strong>，多數在娛樂台，代表標題包括：</p>
+  <ul>
+    <li>「<strong>張員瑛定AI？</strong>」— 質疑其完美外貌的真實性</li>
+    <li>「<strong>儒家girl 張員瑛</strong>」— 以傳統文化包裝的搞笑文</li>
+    <li>「<strong>張員瑛痴𠹌咗線</strong>」— 粵語「瘋了」的俚語表達</li>
+    <li>「<strong>張員瑛真材實料</strong>」— 稱讚實力的帖</li>
+    <li>「<strong>London張員瑛</strong>」— 員瑛倫敦行程討論</li>
+    <li>「<strong>張員瑛小姐，我…</strong>」— 粉絲深情告白帖（3 頁討論）</li>
+  </ul>
+
+  <h4>BANG BANG MV 及 REBEL HEART 回歸反應</h4>
+  <p>MV 回歸帖的典型反應呈現 LIHKG 的毒舌與直率風格：</p>
+  <ul>
+    <li>「<strong>瑞寶啲咸戲又進步咗，瑛妹又同我結婚</strong>」— 粉絲妄想式幽默</li>
+    <li>「<strong>Rei 個造型想點撚樣？大媽風？</strong>」— Rei 造型是 LIHKG 的長期槽點</li>
+    <li>「<strong>我正式宣佈 今年係IVE年</strong>」— 每次回歸的固定口號</li>
+    <li>「<strong>睇嚟瑛黑今次只能反佢隊友</strong>」— 對 anti 策略的 meta 評論</li>
+    <li>粗口（屌、撚等）在討論中自由使用，構成 LIHKG 獨特的直率風格</li>
+  </ul>
+
+  <h4>香港演唱會討論（2024.07）</h4>
+  <p>
+    IVE 香港場演唱會（SHOW WHAT I HAVE）在 LIHKG 產生了<strong>4 個專串、超過 160 頁</strong>的討論。
+    其中反映出獨特的<strong>港陸粉絲張力</strong>：
+  </p>
+  <blockquote>
+    「應援聲勁大、又多人一齊唱。但我隔離坐左個傻佬，支燈唔係fing，剩係閃鳩我。另外個邊大陸女人，成場就拎住電話拍。」<br>
+    「今日好似少左啲大陸人，附近果幾個都係香港人一齊叫應援勁好玩。」
+  </blockquote>
+  <p>演唱會文化觀察：</p>
+  <ul>
+    <li><strong>應援棒禮儀</strong>（「fing」= 正確揮動手燈）被視為粉絲素養指標</li>
+    <li><strong>KITSCH</strong> 和 <strong>HEYA</strong> 被公認為應援最高潮的曲目</li>
+    <li>港陸粉絲在演唱會禮儀上的差異（香港粉自豪於參與應援 vs. 認為大陸粉只顧拍攝）</li>
+  </ul>
+
+  <h4>IVE = 香港專業教育學院？</h4>
+  <p>
+    與其他地區不同，LIHKG 存在一個獨特的現象：「IVE」同時也是<strong>香港專業教育學院</strong>（Institute of Vocational Education）的縮寫。
+    搜尋「IVE」會同時出現韓團討論和學校課程選擇帖，偶爾造成搞笑混淆。
+  </p>
+</div>
+
+<!-- ══════════════ 10. SOURCES ══════════════ -->
+<div class="section" id="sources">
+  <h2><span class="emoji">📚</span>資料來源</h2>
+
+  <h3>中文媒體與社群</h3>
+  <ul>
+    <li><a href="https://www.dcard.tw/@mynameisfrank/post/257532255" target="_blank">Dcard — 詳細拆解！年度造謠 IVE「芙學」為何會有人信？</a></li>
+    <li><a href="https://www.juksy.com/article/130701" target="_blank">JUKSY — IVE 成員張員瑛、安俞真爆不合！？搶 C 位畫面曝光</a></li>
+    <li><a href="https://www.kpopn.com/2025/01/08/news-ive-gda-awards-interaction" target="_blank">Kpopn — IVE又爆不合？網瘋傳張員瑛搶獎座影片</a></li>
+    <li><a href="https://style.udn.com/style/story/8065/7614900" target="_blank">udnSTYLE — IVE公主風唯獨張員瑛不一樣</a></li>
+    <li><a href="https://open.firstory.me/story/cm5afv4gc01v701slgoksgf8k" target="_blank">K-POP相談室 EP.19 — 年末紅毯走位IVE又被批評「宮鬥」</a></li>
+    <li><a href="https://www.ptt.cc/bbs/Marginalman/M.1732432762.A.95D.html" target="_blank">PTT Marginalman — [閒聊] IVE宮鬥</a></li>
+  </ul>
+
+  <h3>Lucky Vicky / 員瑛式思考</h3>
+  <ul>
+    <li><a href="https://www.elle.com/tw/entertainment/gossip/g63471103/ive-wonyoung-lucky-vicky/" target="_blank">ELLE — IVE張員瑛安俞真上《劉Quiz》談走紅心聲，Lucky Vicky竟和佛祖有關？</a></li>
+    <li><a href="https://ilady.life/jang-won-young-lucky-vicky/" target="_blank">iLady — 韓國風靡 IVE「Lucky Vicky」員瑛式思考</a></li>
+    <li><a href="https://www.koreaboo.com/news/ive-jang-wonyoung-lucky-vicky-meme-so-popular-even-chatgpt/" target="_blank">Koreaboo — Lucky Vicky Meme Is So Popular Even ChatGPT...</a></li>
+    <li><a href="https://www.allkpop.com/article/2025/02/ives-jang-won-young-opens-up-about-the-impact-of-the-lucky-vicky-syndrome" target="_blank">allkpop — Jang Won Young opens up about the impact of the "Lucky Vicky" syndrome</a></li>
+    <li><a href="https://www.womenshealthmag.com/tw/mental/relationship/g63106774/ive-lucky-vicky/" target="_blank">Women's Health — 員瑛式思考風靡全網</a></li>
+  </ul>
+
+  <h3>名場面</h3>
+  <ul>
+    <li><a href="https://www.elle.com/tw/entertainment/voice/g60461301/won-young-ive-iconic-moments/" target="_blank">ELLE — 「員瑛轉圈」影片破43億點擊！IVE張員瑛10大名場面</a></li>
+    <li><a href="https://today.line.me/tw/v2/article/kEroExM" target="_blank">LINE TODAY — 比科目三絲滑！IVE 張員瑛「魔性轉圈舞」電翻全網</a></li>
+    <li><a href="https://www.marieclaire.com.tw/beauty/star/86590" target="_blank">Marie Claire — 韓星張員瑛被譽「天生的偶像」</a></li>
+  </ul>
+
+  <h3>Bilibili 影片</h3>
+  <ul>
+    <li><a href="https://www.bilibili.com/video/BV1BkBBYGEqX/" target="_blank">【IVE】年末芙學，不笑賠錢</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1QamKYwEzA/" target="_blank">芙學·IVE後宮傳｜安宥真女王大戰heya篇</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1AVegeyE8h/" target="_blank">IVE領獎疑似內鬥 安宥真和張元英多次甜蜜對視（bushi</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1LgzGYAECj/" target="_blank">【IVE芙2024MAMA】安宥真G5打斷張元英喊場？</a></li>
+    <li><a href="https://www.bilibili.com/video/BV16xwGehE8h/" target="_blank">張元英&安宥真 You Quiz EP276 中字</a></li>
+  </ul>
+
+  <h3>Threads</h3>
+  <ul>
+    <li><a href="https://www.threads.com/@she11y._/post/DCDubdtyscf/" target="_blank">@she11y._ — IVE 成員一個不知道 宮鬥看得津津有味</a></li>
+    <li><a href="https://www.threads.com/@ty56_wh/post/DC2wdLqzgqn" target="_blank">@ty56_wh — 芙學討論</a></li>
+  </ul>
+
+  <h3>微博/豆瓣/知乎 — 黑稱與爭議</h3>
+  <ul>
+    <li><a href="https://www.jishi3.com/star/44148.html" target="_blank">即時尚 — 張元英為什麼叫卵？稱號由來</a></li>
+    <li><a href="https://www.zhihu.com/question/722624440" target="_blank">知乎 — 為什麼張元英叫做亂帝？</a></li>
+    <li><a href="https://www.zhihu.com/question/575458445" target="_blank">知乎 — 張元英到底是個怎麼樣的人？</a></li>
+    <li><a href="https://www.zhihu.com/question/528646068" target="_blank">知乎 — 剛入坑IVE，成員信息整理</a></li>
+    <li><a href="https://news.qq.com/rain/a/20250321A03GF900" target="_blank">騰訊新聞 — 百度副總裁卷進娛樂圈粉絲「開盒」事件</a></li>
+    <li><a href="https://www.163.com/dy/article/JQSU0P7V05560US1.html" target="_blank">網易 — 一文看懂百度副總裁女兒開盒事件始末</a></li>
+    <li><a href="https://m.163.com/dy/article/J2AULDU505372PTN.html" target="_blank">網易 — 韓國女團IVE「辱華MV事件」後續</a></li>
+    <li><a href="https://news.qq.com/rain/a/20240503A04X2H00" target="_blank">騰訊新聞 — 韓國教授力挺偷文化，IVE戴中國結</a></li>
+  </ul>
+
+  <h3>員瑛藥局</h3>
+  <ul>
+    <li><a href="https://www.bilibili.com/video/BV1UJ4m1a7XS/" target="_blank">Bilibili — 員瑛藥局到底是什麼梗？</a></li>
+    <li><a href="https://www.douban.com/group/topic/301911245/" target="_blank">豆瓣 — 員瑛藥局討論帖</a></li>
+    <li><a href="https://www.douban.com/group/topic/301053127/" target="_blank">豆瓣 — 員瑛藥局爭議討論</a></li>
+  </ul>
+
+  <h3>甄芙傳 / 宮鬥</h3>
+  <ul>
+    <li><a href="https://www.bilibili.com/video/BV1ob4deyEw6/" target="_blank">Bilibili — 甄芙傳 第10集</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1TLFiezEcv/" target="_blank">Bilibili — 芙學2024年度總結 | 開啟芙學2025</a></li>
+    <li><a href="https://www.bilibili.com/video/BV1HezaBdEkr/" target="_blank">Bilibili — 安宥真護隊友合集</a></li>
+    <li><a href="https://news.qq.com/rain/a/20240909A048BM00" target="_blank">騰訊新聞 — 從C位癌到踩隊友</a></li>
+  </ul>
+
+  <h3>元英主義 / 油膩爭議 / 香港事件</h3>
+  <ul>
+    <li><a href="https://www.biede.com/wonyoungism-when-self-improvement-becomes-an-aesthetic/" target="_blank">BIE（別的）— Wonyoungism: When Self-Improvement Becomes an Aesthetic</a></li>
+    <li><a href="https://www.biede.com/zhangyuanyingyounidezhutixing/" target="_blank">BIE（別的）— 張元英油膩的主體性</a></li>
+    <li><a href="https://news.qq.com/rain/a/20240501A00C2D00" target="_blank">騰訊新聞 — 元英主義一下火了</a></li>
+    <li><a href="https://news.qq.com/rain/a/20250417A09IIF00" target="_blank">騰訊新聞 — 2年137次轉圈！80億流量狂歡下，誰在肢解真實的張元英？</a></li>
+  </ul>
+
+  <h3>Rei 暴走天竺鼠 / 呆一布</h3>
+  <ul>
+    <li><a href="https://baike.baidu.com/item/%E5%91%86%E4%B8%80%E5%B8%83/59861429" target="_blank">百度百科 — 呆一布</a></li>
+    <li><a href="https://www.kpopn.com/2025/10/28/news-rei-ive-trendy-attitude" target="_blank">Kpopn — Rei 暴走天竺鼠 ATTITUDE 病毒式傳播</a></li>
+  </ul>
+
+  <h3>貼吧 / 豆瓣小組</h3>
+  <ul>
+    <li><a href="https://tieba.baidu.com/f?kw=ive" target="_blank">百度貼吧 — IVE 吧</a></li>
+    <li><a href="https://tiebac.baidu.com/f?ie=utf-8&kw=%E5%BC%A0%E5%85%83%E8%8B%B1" target="_blank">百度貼吧 — 張元英吧</a></li>
+    <li><a href="https://c.tieba.baidu.com/p/8556847190" target="_blank">貼吧 — 路過吧是專門罵安宥真的嗎</a></li>
+    <li><a href="https://www.douban.com/group/627382/" target="_blank">豆瓣韓娛小組</a></li>
+    <li><a href="https://www.douban.com/group/724337/" target="_blank">豆瓣內韓娛觀察組</a></li>
+    <li><a href="https://www.douban.com/doulist/155144991/" target="_blank">豆瓣 — 芙學豆列</a></li>
+    <li><a href="https://www.douban.com/group/topic/310755496/" target="_blank">豆瓣 — 我剛才在B站刷到了IVE宮鬥的視頻</a></li>
+  </ul>
+
+  <h3>老賴茶棧 / 霸王茶姬</h3>
+  <ul>
+    <li><a href="https://www.sina.cn/news/detail/5258963189766336.html" target="_blank">新浪新聞 — 員瑛廣州簽售後奶茶直播</a></li>
+    <li><a href="https://news.china.com/socialgd/10000169/20260125/49194575.html" target="_blank">中華網 — 張元英霸王茶姬事件</a></li>
+  </ul>
+
+  <h3>Liz 身材爭議</h3>
+  <ul>
+    <li><a href="https://www.sohu.com/a/852817972_121924583" target="_blank">搜狐 — IVE成員LIZ身材管理反思</a></li>
+    <li><a href="https://www.zhihu.com/question/579903806" target="_blank">知乎 — Liz到底什麼時候才能瘦下來</a></li>
+  </ul>
+
+  <h3>LIHKG（連登）</h3>
+  <ul>
+    <li><a href="https://lihkg.com/thread/3734120/page/1" target="_blank">LIHKG — [DIVE into IVE] 아이브 討論區 (35) 港場完滿結束</a></li>
+    <li><a href="https://lihkg.com/thread/3731033/page/1" target="_blank">LIHKG — [DIVE into IVE] 아이브 討論區 (34) 港場即將到來</a></li>
+    <li><a href="https://lihkg.com/thread/3856464/page/1" target="_blank">LIHKG — IVE 아이브 'REBEL HEART' MV 討論</a></li>
+    <li><a href="https://lihkg.com/thread/3644406/page/1" target="_blank">LIHKG — [DIVE into IVE] 아이브 討論區 (31) 7月港場</a></li>
+    <li><a href="https://lihkg.com/thread/3287565/page/27" target="_blank">LIHKG — [DIVE into IVE] 아이브 討論區 (22) 初Fan Con</a></li>
+    <li><a href="https://lihkg.com/search?q=%E5%BC%B5%E5%93%A1%E7%91%9B&type=thread" target="_blank">LIHKG — 「張員瑛」搜尋結果（20+ 帖）</a></li>
+    <li><a href="https://groups.hk/51253461779/IVE-LIHKG-GROUP" target="_blank">IVE LIHKG GROUP — Telegram 群組</a></li>
+  </ul>
+
+  <h3>Wikipedia & Profiles</h3>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/Ive_(group)" target="_blank">IVE — Wikipedia (EN)</a></li>
+    <li><a href="https://zh.wikipedia.org/zh-hant/%E5%BC%B5%E5%93%A1%E7%91%9B" target="_blank">張員瑛 — 維基百科</a></li>
+    <li><a href="https://zh.wikipedia.org/wiki/%E5%AE%89%E4%BF%9E%E7%9C%9F" target="_blank">安俞真 — 維基百科</a></li>
+    <li><a href="https://www.ipduck-kpop.wiki/ive/ive_chemistry/" target="_blank">IVE Chemistry — ipduck K-Pop Wiki</a></li>
+  </ul>
+</div>
+
+<a class="back-top" href="#">↑ 回到頂部</a>
+
+<footer>
+  <p>IVE 迷因百科 — 資料蒐集自公開網路來源，僅供參考與娛樂用途</p>
+  <p>本頁面不代表任何立場，芙學相關內容多為虛構或過度解讀，請理性看待</p>
+  <p style="margin-top:8px;">Part of the <a href="ive_report.html">IVE Cross-Platform Analysis</a> project</p>
+</footer>
+
+</div>
+</body>
+</html>
